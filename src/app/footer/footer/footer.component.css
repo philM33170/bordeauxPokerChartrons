@@ -1,13 +1,9 @@
-@import "~bootstrap-icons/font/bootstrap-icons.css";
-
-body {
-  width: 100%;
-}
-
-.footer {
+/*
+.container {
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
+  border: 1px solid rebeccapurple;
   width: 100%;
 }
 
@@ -39,7 +35,7 @@ body {
   background: #ffb03b;
 }
 
-.paraFooter {
+p {
   font-size: 15;
   font-style: italic;
   padding: 0;
@@ -50,4 +46,4 @@ body {
 .credits {
   font-size: 13px;
   color: #ffa012;
-}
+}*/

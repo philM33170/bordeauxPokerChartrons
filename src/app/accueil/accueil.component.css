@@ -1,0 +1,41 @@
+.container-fluid {
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  height: 300px;
+  justify-content: space-around;
+  width: 100%;
+  /*border: solid white;*/
+  align-items: start;
+  @media screen and (max-width: 575px) {
+    height: 850px;
+  }
+}
+
+h3,
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  /*color: #ead2a8;*/
+  color: yellow;
+  /*border: solid white;*/
+  font-family: cursive, sans-serif;
+}
+
+.card {
+  /*margin-top: 20px;*/
+  margin: 10px;
+  /*border: solid blue;*/
+  background-color: #ead2a8;
+  height: 260px;
+  width: 100%;
+  font-family: cursive, sans-serif;
+  overflow: auto;
+}
+
+.info {
+  /*color: #ead2a8;*/
+  color: yellow;
+  padding-left: 30px;
+  font-family: cursive, sans-serif;
+}

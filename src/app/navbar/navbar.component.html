@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="accueil" class="nav-link">Accueil</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="club" class="nav-link">Le club</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Classement
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="">Championnat A</a></li>
+            <li><a class="dropdown-item" routerLink="">Championnat B</a></li>
+            <li><a class="dropdown-item" routerLink="">Championnat C</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="">Championnat Annuel</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Archives
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" routerLink="archives"
+                >Championnat Annuel 2022-2023</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="cnic" class="nav-link">CNIC</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="cnec" class="nav-link">CNEC</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="books" class="nav-link">Partenaires</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <!--navbar-right-->
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="auth/signup" class="nav-link">Créer un compte </a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="auth/signin" class="nav-link"> Connexion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid" style="border: solid white">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Link 1</a></li>
+            <li><a class="dropdown-item" href="#">Link 2</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->

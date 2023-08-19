@@ -1,0 +1,19 @@
+.liste {
+  width: 50%;
+}
+
+h1 {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  color: yellow;
+}
+
+thead tr {
+  border-bottom: 3px solid white;
+}
+
+table {
+  font-family: cursive, sans-serif;
+}
