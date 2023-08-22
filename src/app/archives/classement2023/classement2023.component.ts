@@ -8,10 +8,10 @@ import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2
   styleUrls: ['./classement2023.component.css'],
 })
 export class Classement2023Component implements OnInit {
-  Players: Player[] = [];
+  players: Player[] = [];
   constructor(private classementService: ClassementAnnuel2023Service) {}
 
   ngOnInit(): void {
-    this.Players = this.classementService.classement;
+    this.players = this.classementService.classement;
   }
 }

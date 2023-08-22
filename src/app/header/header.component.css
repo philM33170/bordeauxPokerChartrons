@@ -20,13 +20,6 @@
   /*margin: left;*/
   /*height: 200px;*/
   padding: 0;
-  border: solid 1px white;
-}
-
-.photo {
-  /*height: 200px;*/
-  /*margin: right;*/
-  border: solid 1px yellow;
 }
 
 #image {
@@ -40,14 +33,12 @@ h1 {
   color: yellow;
   font-family: cursive, sans-serif;
   font-size: 80px;
-  border: solid 1px red;
   width: 100%;
   vertical-align: middle;
   display: table-cell;
 }
 
 .titre {
-  border: solid 1px violet;
   display: table;
 }
 /* RESPONSIVE DESIGN */

@@ -1,19 +1,19 @@
 <ng-container>
-  <h1>Classement Annuel - saison 2022-2023 - CNIC</h1>
+  <h1>Classement CNIC 2023</h1>
   <div>
     <table class="table table-dark table-bordered table-hover">
       <thead>
         <tr>
-          <th scope="col">Position</th>
-          <th scope="col">Pseudo</th>
-          <th scope="col">Points</th>
+          <th class="titreColonne" scope="col">POSITION</th>
+          <th class="titreColonne" scope="col">PSEUDO</th>
+          <th class="titreColonne" scope="col">POINTS</th>
         </tr>
       </thead>
       <tbody>
-        <tr table="table-active" *ngFor="let player of Players; let i = index">
+        <tr table="table-active" *ngFor="let player of players; let i = index">
           <th scope="row">{{ i + 1 }}</th>
-          <td>{{ player.pseudo }}</td>
-          <td>{{ player.ptsChampA }} pts</td>
+          <td>{{ player.pseudo | uppercase }}</td>
+          <td>{{ player.cnic2023 }} PTS</td>
         </tr>
       </tbody>
     </table>

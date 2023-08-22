@@ -1,9 +1,9 @@
 .card {
   margin-top: 20px;
   width: 50%;
-  border: solid;
   background-color: #ead2a8;
   font-family: cursive, sans-serif;
+  border-radius: 15px;
 }
 
 .container {

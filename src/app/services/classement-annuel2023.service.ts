@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from '../model/player';
-import { HttpClient } from '@angular/common/http';
+import { classement2023 } from '../model/player';
 
 @Injectable({
   providedIn: 'root',
@@ -8,5 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class ClassementAnnuel2023Service {
   classement: Player[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor() {
+    this.classement = classement2023;
+  }
 }

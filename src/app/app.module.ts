@@ -12,7 +12,10 @@ import { CnicComponent } from './cnic/cnic.component';
 import { CnecComponent } from './cnec/cnec.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { Classement2023Component } from './archives/classement2023/classement2023.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ChampionnatAComponent } from './championnat/championnat-a/championnat-a.component';
+import { ChampionnatBComponent } from './championnat/championnat-b/championnat-b.component';
+import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c.component';
+import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +29,12 @@ import { HttpClientModule } from '@angular/common/http';
     CnecComponent,
     FooterComponent,
     Classement2023Component,
+    ChampionnatAComponent,
+    ChampionnatBComponent,
+    ChampionnatCComponent,
+    ChampionnatAnnuelComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

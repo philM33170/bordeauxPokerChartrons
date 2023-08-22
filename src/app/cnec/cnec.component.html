@@ -1,3 +1,33 @@
 <ng-container>
-  <p>CNEC...</p>
+  <h1>Demi-Finale régionale 2023 - zone Aquitaine</h1>
+  <div>
+    <table class="table table-dark table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="titreColonne" scope="col">POSITION</th>
+          <th class="titreColonne" scope="col">CLUB</th>
+          <th class="titreColonne" scope="col">MANCHE 1</th>
+          <th class="titreColonne" scope="col">MANCHE 2</th>
+          <th class="titreColonne" scope="col">MANCHE 3</th>
+          <th class="titreColonne" scope="col">MANCHE 4</th>
+          <th class="titreColonne" scope="col">TOTAL PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          table="table-active"
+          *ngFor="let club of clubs; let i = index"
+          [class.qualif]="i < 3"
+        >
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ club.nom | uppercase }}</td>
+          <td>{{ club.manche1 }} PTS</td>
+          <td>{{ club.manche2 }} PTS</td>
+          <td>{{ club.manche3 }} PTS</td>
+          <td>{{ club.manche4 }} PTS</td>
+          <td>{{ club.totalPts }} PTS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </ng-container>

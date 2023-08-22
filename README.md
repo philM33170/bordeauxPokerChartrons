@@ -1,27 +1,33 @@
 # Bpc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+---
 
-## Development server
+Ce projet est la première version du site web de l'association Bordeaux Poker Chartrons.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Objectif du projet
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ayant un profil débutant, ce projet personnel a pour but de m'exercer sur
 
-## Build
+        - la configuration/conception d'un projet Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+        - la mise en repo sur GitHub.
 
-## Running unit tests
+        - la mise en production en attendant une version plus avancée.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ce projet utilise la version 14.0.1 d'Angular ainsi que Bootstrap 5.
 
-## Further help
+Cette version repose essentiellement sur des données static sans base de données associée.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Utilitaires
+
+---
+
+- VS Code
+
+- Git

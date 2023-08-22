@@ -15,5 +15,16 @@ thead tr {
 }
 
 table {
-  font-family: cursive, sans-serif;
+  /*font-family: cursive, sans-serif;*/
+  font-family: "Roboto";
+}
+
+td,
+th {
+  text-align: center;
+  color: orange;
+}
+
+.titreColonne {
+  color: white;
 }

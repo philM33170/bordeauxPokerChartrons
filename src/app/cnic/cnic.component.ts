@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../model/player';
+import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2023.service';
 
 @Component({
   selector: 'app-cnic',
@@ -7,15 +8,15 @@ import { Player } from '../model/player';
   styleUrls: ['./cnic.component.css'],
 })
 export class CnicComponent implements OnInit {
-  Players: Player[] = [
-    { pseudo: 'Creep', ptsChampA: 0, membre: true },
-    { pseudo: 'Ombruss', ptsChampA: 0, membre: true },
-    { pseudo: 'ManuKiller', ptsChampA: 0, membre: true },
-    { pseudo: 'Tass', ptsChampA: 0, membre: true },
-    { pseudo: 'Ataleuse', ptsChampA: 0, membre: true },
-    { pseudo: 'Greg', ptsChampA: 0, membre: false },
-  ];
-  constructor() {}
+  players: Player[] = [];
+  constructor(private classementService: ClassementAnnuel2023Service) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const classement = this.classementService.classement;
+    for (let player of classement) {
+      if (player.membre === true) {
+        this.players.push(player);
+      }
+    }
+  }
 }

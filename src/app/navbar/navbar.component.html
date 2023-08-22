@@ -30,13 +30,30 @@
             Classement
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" routerLink="">Championnat A</a></li>
-            <li><a class="dropdown-item" routerLink="">Championnat B</a></li>
-            <li><a class="dropdown-item" routerLink="">Championnat C</a></li>
             <li>
-              <a class="dropdown-item" routerLink="">Championnat Annuel</a>
+              <a class="dropdown-item" routerLink="championnatA"
+                >Championnat A</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="championnatB"
+                >Championnat B</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="championnatC"
+                >Championnat C</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="championnatAnnuel"
+                >Championnat Annuel</a
+              >
             </li>
           </ul>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="résultat" class="nav-link">Résultats</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -61,9 +78,6 @@
         </li>
         <li routerLinkActive="active" class="nav-item">
           <a routerLink="cnec" class="nav-link">CNEC</a>
-        </li>
-        <li routerLinkActive="active" class="nav-item">
-          <a routerLink="books" class="nav-link">Partenaires</a>
         </li>
         <li routerLinkActive="active" class="nav-item">
           <a routerLink="contact" class="nav-link">Contact</a>

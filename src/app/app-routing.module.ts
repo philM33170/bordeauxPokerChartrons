@@ -7,6 +7,10 @@ import { ContactComponent } from './contact/contact.component';
 import { CnicComponent } from './cnic/cnic.component';
 import { CnecComponent } from './cnec/cnec.component';
 import { Classement2023Component } from './archives/classement2023/classement2023.component';
+import { ChampionnatAComponent } from './championnat/championnat-a/championnat-a.component';
+import { ChampionnatBComponent } from './championnat/championnat-b/championnat-b.component';
+import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c.component';
+import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -15,6 +19,10 @@ const routes: Routes = [
   { path: 'cnic', component: CnicComponent },
   { path: 'cnec', component: CnecComponent },
   { path: 'archives', component: Classement2023Component },
+  { path: 'championnatA', component: ChampionnatAComponent },
+  { path: 'championnatB', component: ChampionnatBComponent },
+  { path: 'championnatC', component: ChampionnatCComponent },
+  { path: 'championnatAnnuel', component: ChampionnatAnnuelComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
 ];
 
