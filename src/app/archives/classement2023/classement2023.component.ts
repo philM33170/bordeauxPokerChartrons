@@ -12,6 +12,12 @@ export class Classement2023Component implements OnInit {
   constructor(private classementService: ClassementAnnuel2023Service) {}
 
   ngOnInit(): void {
-    this.players = this.classementService.classement;
+    this.getClassement();
+  }
+
+  getClassement() {
+    this.classementService
+      .getClassement()
+      .subscribe((players) => (this.players = players));
   }
 }

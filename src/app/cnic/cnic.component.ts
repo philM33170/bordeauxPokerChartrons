@@ -12,11 +12,12 @@ export class CnicComponent implements OnInit {
   constructor(private classementService: ClassementAnnuel2023Service) {}
 
   ngOnInit(): void {
-    const classement = this.classementService.classement;
-    for (let player of classement) {
-      if (player.membre === true) {
-        this.players.push(player);
-      }
-    }
+    this.getClassement();
+  }
+
+  getClassement() {
+    this.classementService
+      .getClassementCNIC()
+      .subscribe((players) => (this.players = players));
   }
 }
