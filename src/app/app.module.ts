@@ -16,7 +16,15 @@ import { ChampionnatAComponent } from './championnat/championnat-a/championnat-a
 import { ChampionnatBComponent } from './championnat/championnat-b/championnat-b.component';
 import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c.component';
 import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import localeFr from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +41,17 @@ import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/cha
     ChampionnatBComponent,
     ChampionnatCComponent,
     ChampionnatAnnuelComponent,
+    CalendrierComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

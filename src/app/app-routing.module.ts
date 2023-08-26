@@ -11,6 +11,7 @@ import { ChampionnatAComponent } from './championnat/championnat-a/championnat-a
 import { ChampionnatBComponent } from './championnat/championnat-b/championnat-b.component';
 import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c.component';
 import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
+import { CalendrierComponent } from './calendrier/calendrier.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'championnatB', component: ChampionnatBComponent },
   { path: 'championnatC', component: ChampionnatCComponent },
   { path: 'championnatAnnuel', component: ChampionnatAnnuelComponent },
+  { path: 'calendrier', component: CalendrierComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
 ];
 
