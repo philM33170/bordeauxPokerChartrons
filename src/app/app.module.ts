@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -42,6 +43,7 @@ registerLocaleData(localeFr, 'fr');
     ChampionnatCComponent,
     ChampionnatAnnuelComponent,
     CalendrierComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
