@@ -6,12 +6,10 @@
         mwlCalendarPreviousView
         [(viewDate)]="viewDate"
         [view]="view"
+        (viewDateChange)="closeOpenMonthViewDay()"
       >
         Précédent
       </button>
-      <!-- <button id="today" mwlCalendarToday [(viewDate)]="viewDate">
-        {{ viewDate.toLocaleDateString("fr", { month: "long" }) | uppercase }}
-      </button> -->
       <div id="cal-date-field">
         {{ viewDate | calendarDate : view + "ViewTitle" : "fr" | uppercase }}
       </div>
@@ -20,6 +18,7 @@
         mwlCalendarNextView
         [(viewDate)]="viewDate"
         [view]="view"
+        (viewDateChange)="closeOpenMonthViewDay()"
       >
         Suivant
       </button>
@@ -28,8 +27,10 @@
   <mwl-calendar-month-view
     [viewDate]="viewDate"
     [events]="events"
-    locale="fr"
+    [activeDayIsOpen]="activeDayIsOpen"
+    (dayClicked)="dayClicked($event.day)"
     (beforeViewRender)="beforeMonthViewRender($event)"
+    locale="fr"
   >
   </mwl-calendar-month-view>
 </div>

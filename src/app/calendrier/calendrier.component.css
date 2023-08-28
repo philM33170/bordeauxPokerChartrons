@@ -20,7 +20,6 @@
 }
 
 button {
-  /*background-color: rgb(163, 146, 51);*/
   background-color: orange;
   border-radius: 10px;
   color: black;
@@ -34,8 +33,39 @@ button {
   font-weight: 500;
 }
 
+/*-----------------------------------------
+# Tous les des jours du calendrier
+-----------------------------------------*/
 .cal-month-view .bg-pink,
 .cal-week-view .cal-day-columns .bg-pink,
 .cal-day-view .bg-pink {
-  background-color: gray !important;
+  background-color: rgb(158, 164, 169) !important;
+}
+
+/*-----------------------------------------
+# Pastille d'évènement
+-----------------------------------------*/
+.cal-month-view .cal-event {
+  /*background-color: rgb(138, 42, 223);*/
+  /*background-color: yellow;*/
+  background-color: rgb(62, 6, 116);
+}
+
+/*-----------------------------------------
+# Tous les chiffres des jours du calendrier
+-----------------------------------------*/
+span.cal-day-number {
+  color: blue !important;
+  font-weight: 400 !important;
+}
+
+/*--------------
+# Jour en cours
+--------------*/
+.cal-day-cell.cal-today {
+  background-color: rgb(217, 147, 16) !important;
+}
+
+.cal-event-title {
+  color: white !important;
 }
