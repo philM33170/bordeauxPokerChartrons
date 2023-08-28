@@ -34,7 +34,8 @@ button {
   font-weight: 500;
 }
 
-/*mwl-calendar-month-view {
-  background-color: olive;
-  color: olive;
-}*/
+.cal-month-view .bg-pink,
+.cal-week-view .cal-day-columns .bg-pink,
+.cal-day-view .bg-pink {
+  background-color: gray !important;
+}
