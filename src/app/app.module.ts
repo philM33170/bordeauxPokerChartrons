@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -44,10 +46,12 @@ registerLocaleData(localeFr, 'fr');
     ChampionnatAnnuelComponent,
     CalendrierComponent,
     PageNotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

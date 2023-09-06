@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+  /*border: solid 1px blue;*/
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: azure;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.btn {
+  height: 50px;
+  width: 150px;
+}
+
+input:placeholder-shown {
+  border: solid 3px orange;
+}
+
+ng-container {
+  color: azure;
+  border: solid 1px white;
+}

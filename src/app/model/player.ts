@@ -4,9 +4,7 @@ export interface Player {
   ptsChampB?: number;
   ptsChampC?: number;
   membre: boolean;
-
   cnic2023?: number;
-
   nombreParties2023?: number;
 }
 
