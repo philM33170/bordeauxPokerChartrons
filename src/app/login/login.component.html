@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <h1 class="mb-3">Connexion</h1>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
     <div class="form-floating mb-3 w-25">
@@ -49,4 +49,23 @@
       </button>
     </div>
   </form>
+</div> -->
+<div class="container">
+  <div class="signin">
+    <div class="content">
+      <h2>Connexion</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
+        <div class="inputBox"><input type="text" required /> <i>Pseudo</i></div>
+        <div class="inputBox">
+          <input type="password" required /> <i>Mot de passe</i>
+        </div>
+        <div class="inputBox submit">
+          <!-- <input class="submit" type="submit" value="Login" /> -->
+          <button class="submit" type="submit" [disabled]="loginForm.invalid">
+            SE CONNECTER
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

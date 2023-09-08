@@ -1,8 +1,7 @@
-form {
+/*form {
   display: flex;
   flex-direction: column;
   margin: 5% 0;
-  /*border: solid 1px blue;*/
   justify-content: center;
   align-items: center;
 }
@@ -25,4 +24,114 @@ input:placeholder-shown {
 ng-container {
   color: azure;
   border: solid 1px white;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  width: 100%;
+  margin: 20px 0;
+  background: #000;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+div .signin {
+  width: 400px;
+  background: #222;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+}
+
+div .signin .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "Quicksand";
+}
+
+div .signin .content h2 {
+  font-size: 2em;
+  color: #0f0;
+  text-transform: uppercase;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+div .signin .content form .inputBox {
+  position: relative;
+  width: 100%;
+}
+
+div .signin .content form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+div .signin .content form .inputBox button {
+  position: relative;
+  width: 100%;
+  background: #0f0;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-weight: 700;
+  padding: 10px;
+  color: #000;
+  font-size: 1.35em;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  font-family: "Quicksand";
+}
+
+div .signin .content form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+div .signin .content form .inputBox input:focus ~ i,
+div .signin .content form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+input[type="submit"]:active {
+  opacity: 0.6;
 }
