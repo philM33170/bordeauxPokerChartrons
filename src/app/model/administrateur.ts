@@ -1,4 +1,4 @@
 export interface Administrateur {
-  email: string;
+  pseudo: string;
   password: string;
 }

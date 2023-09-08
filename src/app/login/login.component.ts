@@ -18,16 +18,16 @@ export class LoginComponent implements OnInit {
 
   initForm() {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      pseudo: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 
   onSubmitForm() {
-    const email = this.loginForm.get('email')!.value;
+    const pseudo = this.loginForm.get('pseudo')!.value;
     const password = this.loginForm.get('password')!.value;
     this.newAdmin = {
-      email,
+      pseudo,
       password,
     };
     this.verifAdmin(this.newAdmin);
