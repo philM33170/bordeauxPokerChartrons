@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Administrateur } from '../model/administrateur';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AccountService {
+  constructor() {}
 
-  constructor() { }
+  createAdmin(admin: Administrateur) {
+    return new Observable();
+  }
 }

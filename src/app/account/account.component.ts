@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Administrateur } from '../model/administrateur';
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-account',
@@ -11,7 +12,10 @@ export class AccountComponent implements OnInit {
   registrationForm!: FormGroup;
 
   newAdmin!: Administrateur;
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private accountService: AccountService
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -34,5 +38,7 @@ export class AccountComponent implements OnInit {
     this.createAdmin(this.newAdmin);
   }
 
-  createAdmin(admin: Administrateur) {}
+  createAdmin(admin: Administrateur) {
+    this.accountService.createAdmin(admin);
+  }
 }
