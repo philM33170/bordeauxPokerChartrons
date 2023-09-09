@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Administrateur } from '../model/administrateur';
+import { Administrateur, administrateurs } from '../model/administrateur';
 import { AccountService } from '../services/account.service';
 
 @Component({
@@ -11,7 +11,6 @@ import { AccountService } from '../services/account.service';
 export class AccountComponent implements OnInit {
   registrationForm!: FormGroup;
 
-  newAdmin!: Administrateur;
   constructor(
     private fb: FormBuilder,
     private accountService: AccountService
@@ -31,14 +30,24 @@ export class AccountComponent implements OnInit {
   onSubmitForm() {
     const pseudo = this.registrationForm.get('pseudo')!.value;
     const password = this.registrationForm.get('password')!.value;
-    this.newAdmin = {
+    const newAdmin: Administrateur = {
       pseudo,
       password,
     };
-    this.createAdmin(this.newAdmin);
+    this.createAdmin(newAdmin);
   }
 
   createAdmin(admin: Administrateur) {
-    this.accountService.createAdmin(admin);
+    this.accountService.createAdmin(admin).subscribe({
+      next: (data) => {
+        if (data === true) {
+          console.log('création ok' + ' ' + data);
+          console.log(administrateurs);
+        } else {
+          console.log('création ko' + ' ' + data);
+          console.log(administrateurs);
+        }
+      },
+    });
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Administrateur } from '../model/administrateur';
-import { Observable } from 'rxjs';
+import { Administrateur, administrateurs } from '../model/administrateur';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +8,15 @@ import { Observable } from 'rxjs';
 export class AccountService {
   constructor() {}
 
-  createAdmin(admin: Administrateur) {
-    return new Observable();
+  createAdmin(admin: Administrateur): Observable<boolean> {
+    if (
+      administrateurs.some(
+        (v) => v.pseudo.toLowerCase() === admin.pseudo.toLowerCase()
+      )
+    ) {
+      return of(false);
+    }
+    administrateurs.push(admin);
+    return of(true);
   }
 }

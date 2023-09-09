@@ -10,7 +10,6 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  newAdmin!: Administrateur;
 
   wrongCredentials = false;
   constructor(private fb: FormBuilder, private loginService: LoginService) {}
@@ -29,11 +28,11 @@ export class LoginComponent implements OnInit {
   onSubmitForm() {
     const pseudo = this.loginForm.get('pseudo')!.value;
     const password = this.loginForm.get('password')!.value;
-    this.newAdmin = {
+    const newAdmin: Administrateur = {
       pseudo,
       password,
     };
-    this.login(this.newAdmin);
+    this.login(newAdmin);
   }
 
   login(admin: Administrateur) {
