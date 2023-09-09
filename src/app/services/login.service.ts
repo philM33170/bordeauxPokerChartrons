@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Administrateur } from '../model/administrateur';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  constructor() {}
 
-  constructor() { }
+  checkAdmin(admin: Administrateur): Observable<boolean> {
+    return new Observable();
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Administrateur } from '../model/administrateur';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ import { Administrateur } from '../model/administrateur';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   newAdmin!: Administrateur;
-  constructor(private fb: FormBuilder) {}
+
+  wrongCredentials = false;
+  constructor(private fb: FormBuilder, private loginService: LoginService) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -30,8 +33,18 @@ export class LoginComponent implements OnInit {
       pseudo,
       password,
     };
-    this.verifAdmin(this.newAdmin);
+    this.login(this.newAdmin);
   }
 
-  verifAdmin(admin: Administrateur) {}
+  login(admin: Administrateur) {
+    this.wrongCredentials = false;
+    this.loginService.checkAdmin(admin).subscribe(
+      (result) => {
+        //this.router.navigate('');
+      },
+      (error) => {
+        this.wrongCredentials = true;
+      }
+    );
+  }
 }
