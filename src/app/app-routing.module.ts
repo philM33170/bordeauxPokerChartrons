@@ -14,6 +14,7 @@ import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/cha
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'championnatAnnuel', component: ChampionnatAnnuelComponent },
   { path: 'calendrier', component: CalendrierComponent },
   { path: 'auth/signin', component: LoginComponent },
+  { path: 'auth/signup', component: AccountComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

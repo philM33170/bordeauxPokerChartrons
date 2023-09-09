@@ -1,1 +1,21 @@
-<p>account works!</p>
+<div class="container">
+  <div class="signin">
+    <div class="content">
+      <h2>Inscription</h2>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmitForm()">
+        <div class="inputBox">
+          <input type="text" formControlName="pseudo" required /> <i>Pseudo</i>
+        </div>
+        <div class="inputBox">
+          <input type="password" formControlName="password" required />
+          <i>Mot de passe</i>
+        </div>
+        <div class="inputBox">
+          <button type="submit" [disabled]="registrationForm.invalid">
+            s'inscrire
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
