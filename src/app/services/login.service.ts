@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Administrateur } from '../model/administrateur';
-import { Observable, of } from 'rxjs';
+import { Administrateur, administrateurs } from '../model/administrateur';
+import { Observable, of, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +8,14 @@ import { Observable, of } from 'rxjs';
 export class LoginService {
   constructor() {}
 
-  checkAdmin(admin: Administrateur): Observable<boolean> {
-    return of();
+  checkAdmin(admin: Administrateur): Observable<Administrateur> {
+    if (!administrateurs.some((v) => v.pseudo === admin.pseudo)) {
+      return throwError(() => new Error('Pseudo inexistant !'));
+    } else if (!administrateurs.some((v) => v.password === admin.password)) {
+      return throwError(
+        () => new Error("Vous n'avez pas saisi le bon mot de passe !")
+      );
+    }
+    return of(admin);
   }
 }

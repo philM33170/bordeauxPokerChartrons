@@ -38,11 +38,13 @@ export class LoginComponent implements OnInit {
   login(admin: Administrateur) {
     this.wrongCredentials = false;
     this.loginService.checkAdmin(admin).subscribe(
-      (result) => {
+      (data) => {
         //this.router.navigate('');
+        console.log('Vous êtes loggué');
       },
       (error) => {
         this.wrongCredentials = true;
+        console.log(error);
       }
     );
   }
