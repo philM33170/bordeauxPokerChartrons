@@ -20,7 +20,7 @@ export class AccountComponent implements OnInit {
   initForm() {
     this.registrationForm = this.fb.group({
       pseudo: ['', Validators.required],
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
@@ -31,6 +31,8 @@ export class AccountComponent implements OnInit {
       pseudo,
       password,
     };
-    //this.login(this.newAdmin);
+    this.createAdmin(this.newAdmin);
   }
+
+  createAdmin(admin: Administrateur) {}
 }

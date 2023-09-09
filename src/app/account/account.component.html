@@ -1,13 +1,26 @@
 <div class="container">
-  <div class="signin">
+  <div class="signup">
     <div class="content">
       <h2>Inscription</h2>
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmitForm()">
         <div class="inputBox">
-          <input type="text" formControlName="pseudo" required /> <i>Pseudo</i>
+          <input
+            type="text"
+            name="username"
+            formControlName="pseudo"
+            autocomplete="username"
+            required
+          />
+          <i>Pseudo</i>
         </div>
         <div class="inputBox">
-          <input type="password" formControlName="password" required />
+          <input
+            type="password"
+            name="password"
+            formControlName="password"
+            autocomplete="new-password"
+            required
+          />
           <i>Mot de passe</i>
         </div>
         <div class="inputBox">

@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-div .signin {
+div .signup {
   width: 400px;
   background: #222;
   z-index: 1000;
@@ -29,7 +29,7 @@ div .signin {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
 }
 
-div .signin .content {
+div .signup .content {
   position: relative;
   width: 100%;
   display: flex;
@@ -40,7 +40,7 @@ div .signin .content {
   font-family: "Quicksand";
 }
 
-div .signin .content h2 {
+div .signup .content h2 {
   font-size: 2em;
   color: #0f0;
   text-transform: uppercase;
@@ -53,12 +53,12 @@ form {
   gap: 25px;
 }
 
-div .signin .content form .inputBox {
+div .signup .content form .inputBox {
   position: relative;
   width: 100%;
 }
 
-div .signin .content form .inputBox input {
+div .signup .content form .inputBox input {
   position: relative;
   width: 100%;
   background: #333;
@@ -71,7 +71,7 @@ div .signin .content form .inputBox input {
   font-size: 1em;
 }
 
-div .signin .content form .inputBox button {
+button {
   position: relative;
   width: 100%;
   background: #0f0;
@@ -88,7 +88,7 @@ div .signin .content form .inputBox button {
   font-family: "Quicksand";
 }
 
-div .signin .content form .inputBox i {
+div .signup .content form .inputBox i {
   position: absolute;
   left: 0;
   padding: 15px 10px;
@@ -98,13 +98,17 @@ div .signin .content form .inputBox i {
   pointer-events: none;
 }
 
-div .signin .content form .inputBox input:focus ~ i,
-div .signin .content form .inputBox input:valid ~ i {
+div .signup .content form .inputBox input:focus ~ i,
+div .signup .content form .inputBox input:valid ~ i {
   transform: translateY(-7.5px);
   font-size: 0.8em;
   color: #fff;
 }
 
-input[type="submit"]:active {
+button[type="submit"]:active {
   opacity: 0.6;
+}
+
+button[type="submit"]:disabled {
+  cursor: not-allowed;
 }
