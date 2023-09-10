@@ -27,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './account/account.component';
+import { ResultatComponent } from './resultats/resultat/resultat.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -49,6 +50,7 @@ registerLocaleData(localeFr, 'fr');
     PageNotFoundComponent,
     LoginComponent,
     AccountComponent,
+    ResultatComponent,
   ],
   imports: [
     BrowserModule,
