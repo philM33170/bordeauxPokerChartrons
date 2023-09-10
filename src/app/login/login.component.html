@@ -27,6 +27,7 @@
           <button type="submit" [disabled]="loginForm.invalid">
             se connecter
           </button>
+          <small *ngIf="errorMessage">{{ errorMessage }}</small>
         </div>
       </form>
     </div>

@@ -12,9 +12,7 @@ export class LoginService {
     if (!administrateurs.some((v) => v.pseudo === admin.pseudo)) {
       return throwError(() => new Error('Pseudo inexistant !'));
     } else if (!administrateurs.some((v) => v.password === admin.password)) {
-      return throwError(
-        () => new Error("Vous n'avez pas saisi le bon mot de passe !")
-      );
+      return throwError(() => new Error('Mot de passe erroné !'));
     }
     return of(admin);
   }

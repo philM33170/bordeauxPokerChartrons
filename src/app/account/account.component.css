@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 380px;
+  height: 480px;
   width: 100%;
   margin: 20px 0;
   background: #000;
@@ -36,7 +36,7 @@ div .signup .content {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   font-family: "Quicksand";
 }
 
@@ -50,7 +50,7 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 5px;
 }
 
 div .signup .content form .inputBox {
@@ -111,4 +111,11 @@ button[type="submit"]:active {
 
 button[type="submit"]:disabled {
   cursor: not-allowed;
+}
+
+small {
+  font-weight: 500;
+  text-transform: lo;
+  font-family: "Quicksand";
+  color: rgb(223, 76, 76);
 }

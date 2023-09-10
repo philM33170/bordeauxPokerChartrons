@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 380px;
+  height: 480px;
   width: 100%;
   margin: 20px 0;
   background: #000;
@@ -111,4 +111,11 @@ button[type="submit"]:active {
 
 button[type="submit"]:disabled {
   cursor: not-allowed;
+}
+
+small {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Quicksand";
+  color: rgb(223, 76, 76);
 }

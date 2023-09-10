@@ -10,7 +10,7 @@ import { AccountService } from '../services/account.service';
 })
 export class AccountComponent implements OnInit {
   registrationForm!: FormGroup;
-
+  wrongCredentials = false;
   constructor(
     private fb: FormBuilder,
     private accountService: AccountService
@@ -22,7 +22,7 @@ export class AccountComponent implements OnInit {
 
   initForm() {
     this.registrationForm = this.fb.group({
-      pseudo: ['', Validators.required],
+      pseudo: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
@@ -38,6 +38,7 @@ export class AccountComponent implements OnInit {
   }
 
   createAdmin(admin: Administrateur) {
+    this.wrongCredentials = false;
     this.accountService.createAdmin(admin).subscribe({
       next: (data) => {
         if (data === true) {

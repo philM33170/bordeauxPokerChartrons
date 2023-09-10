@@ -10,8 +10,8 @@ import { LoginService } from '../services/login.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-
-  wrongCredentials = false;
+  //wrongCredentials = false;
+  errorMessage!: string;
   constructor(private fb: FormBuilder, private loginService: LoginService) {}
 
   ngOnInit(): void {
@@ -36,15 +36,15 @@ export class LoginComponent implements OnInit {
   }
 
   login(admin: Administrateur) {
-    this.wrongCredentials = false;
+    //this.wrongCredentials = false;
     this.loginService.checkAdmin(admin).subscribe(
       (data) => {
         //this.router.navigate('');
         console.log('Vous êtes loggué');
       },
-      (error) => {
-        this.wrongCredentials = true;
-        console.log(error);
+      (error: Error) => {
+        //this.wrongCredentials = true;
+        this.errorMessage = error.message;
       }
     );
   }

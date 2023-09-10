@@ -10,9 +10,13 @@
             formControlName="pseudo"
             autocomplete="username"
             required
+            #pseudo
           />
           <i>Pseudo</i>
         </div>
+        <small *ngIf="pseudo.value.length < 3 ? true : false"
+          >Le Pseudo doit contenir 3 caractères minimum</small
+        >
         <div class="inputBox">
           <input
             type="password"
@@ -20,9 +24,13 @@
             formControlName="password"
             autocomplete="new-password"
             required
+            #pass
           />
           <i>Mot de passe</i>
         </div>
+        <small *ngIf="pass.value.length < 6 ? true : false"
+          >Le Mot de passe doit contenir 6 caractères minimum</small
+        >
         <div class="inputBox">
           <button type="submit" [disabled]="registrationForm.invalid">
             s'inscrire
