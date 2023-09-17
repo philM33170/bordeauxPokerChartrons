@@ -90,11 +90,14 @@
     <div class="navbar-collapse collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <!--navbar-right-->
-        <li routerLinkActive="active" class="nav-item">
+        <li routerLinkActive="active" class="nav-item" *ngIf="!isAuthenticated">
           <a routerLink="auth/signup" class="nav-link">Créer un compte </a>
         </li>
-        <li routerLinkActive="active" class="nav-item">
+        <li routerLinkActive="active" class="nav-item" *ngIf="!isAuthenticated">
           <a routerLink="auth/signin" class="nav-link"> Connexion</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item" *ngIf="isAuthenticated">
+          <a routerLink="auth/signin" class="nav-link"> Déconnexion</a>
         </li>
       </ul>
     </div>

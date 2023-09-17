@@ -1,6 +1,6 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 <div class="container">
-  <app-accueil class="acc" *ngIf="active === 'affiche'"></app-accueil>
+  <app-accueil *ngIf="active === 'affiche'"></app-accueil>
   <router-outlet (activate)="updateActive()"></router-outlet>
 </div>
