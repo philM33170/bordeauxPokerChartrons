@@ -28,7 +28,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './account/account.component';
 import { ResultatComponent } from './resultats/resultat/resultat.component';
-import { LogoutComponent } from './logout/logout.component';
+import { ForumComponent } from './forum/forum.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -52,7 +52,7 @@ registerLocaleData(localeFr, 'fr');
     LoginComponent,
     AccountComponent,
     ResultatComponent,
-    LogoutComponent,
+    ForumComponent,
   ],
   imports: [
     BrowserModule,

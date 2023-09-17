@@ -23,4 +23,8 @@ export class NavbarComponent implements OnInit {
     });
     this.logService.getIsAuthenticated();
   }
+
+  onLogout() {
+    this.logService.onLogout();
+  }
 }

@@ -26,4 +26,9 @@ export class LoginService {
   getIsAuthenticated() {
     this.authSubject.next(this.isAuthenticated);
   }
+
+  onLogout() {
+    this.isAuthenticated = false;
+    this.authSubject.next(this.isAuthenticated);
+  }
 }

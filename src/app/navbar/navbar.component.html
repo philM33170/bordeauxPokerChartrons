@@ -97,7 +97,13 @@
           <a routerLink="auth/signin" class="nav-link"> Connexion</a>
         </li>
         <li routerLinkActive="active" class="nav-item" *ngIf="isAuthenticated">
-          <a routerLink="logout" class="nav-link"> Déconnexion</a>
+          <a routerLink="forum" class="nav-link"> Forum</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item" *ngIf="isAuthenticated">
+          <a routerLink="auth/signin" (click)="onLogout()" class="nav-link">
+            Déconnexion</a
+          >
+          <!-- <a routerLink="logout" class="nav-link"> Déconnexion</a> -->
         </li>
       </ul>
     </div>

@@ -16,7 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { ResultatComponent } from './resultats/resultat/resultat.component';
-import { LogoutComponent } from './logout/logout.component';
+import { ForumComponent } from './forum/forum.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'resultat', component: ResultatComponent },
   { path: 'auth/signin', component: LoginComponent },
   { path: 'auth/signup', component: AccountComponent },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'forum', component: ForumComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
