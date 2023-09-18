@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Club } from '../model/club';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
+import { CnecService } from '../services/cnec.service';
 
 @Component({
   selector: 'app-cnec',
@@ -7,7 +10,7 @@ import { Club } from '../model/club';
   styleUrls: ['./cnec.component.css'],
 })
 export class CnecComponent implements OnInit {
-  clubs: Club[] = [
+  /*clubs: Club[] = [
     {
       nom: 'Anonymous Poker',
       manche1: 64,
@@ -72,8 +75,13 @@ export class CnecComponent implements OnInit {
       manche4: 53,
       totalPts: 191,
     },
-  ];
-  constructor() {}
+  ];*/
+  clubsCollection!: AngularFirestoreCollection<Club>;
+  clubs$!: Observable<Club[]>;
+  constructor(private cnecService: CnecService) {}
 
-  ngOnInit(): void {}
+  async ngOnInit(): Promise<void> {
+    this.clubsCollection = await this.cnecService.readClubsCnec();
+    this.clubs$ = this.clubsCollection.valueChanges();
+  }
 }

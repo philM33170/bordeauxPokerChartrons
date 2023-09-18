@@ -16,7 +16,7 @@
       <tbody>
         <tr
           table="table-active"
-          *ngFor="let club of clubs; let i = index"
+          *ngFor="let club of clubs$ | async; let i = index"
           [class.qualif]="i < 3"
         >
           <th scope="row">{{ i + 1 }}</th>
