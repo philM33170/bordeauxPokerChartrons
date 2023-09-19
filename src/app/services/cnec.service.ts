@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Club } from '../model/club';
 
@@ -6,7 +6,8 @@ import { Club } from '../model/club';
   providedIn: 'root',
 })
 export class CnecService {
-  constructor(private afs: AngularFirestore) {}
+  afs = inject(AngularFirestore);
+  constructor() {}
 
   readClubsCnec() {
     return this.afs.collection<Club>('clubs', (element) =>
