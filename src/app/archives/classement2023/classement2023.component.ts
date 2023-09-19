@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Player } from 'src/app/model/player';
 import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2023.service';
 
@@ -7,11 +8,12 @@ import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2
   templateUrl: './classement2023.component.html',
   styleUrls: ['./classement2023.component.css'],
 })
-export class Classement2023Component implements OnInit {
-  players: Player[] = [];
-  constructor(private classementService: ClassementAnnuel2023Service) {}
+export class Classement2023Component {
+  classementService = inject(ClassementAnnuel2023Service);
+  players$: Observable<Player[]> = this.classementService.getClassement();
+  constructor() {}
 
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     this.getClassement();
   }
 
@@ -19,5 +21,5 @@ export class Classement2023Component implements OnInit {
     this.classementService
       .getClassement()
       .subscribe((players) => (this.players = players));
-  }
+  }*/
 }

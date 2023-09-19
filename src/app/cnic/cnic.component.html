@@ -11,7 +11,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr table="table-active" *ngFor="let player of players; let i = index">
+        <tr
+          table="table-active"
+          *ngFor="let player of players$ | async; let i = index"
+        >
           <th scope="row">{{ i + 1 }}</th>
           <td>{{ player.pseudo | uppercase }}</td>
           <td>{{ player.cnic2023 }} PTS</td>

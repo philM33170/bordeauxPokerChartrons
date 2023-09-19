@@ -9,7 +9,7 @@ export interface Player {
 }
 
 export const classement2023: Player[] = [
-  { pseudo: 'Kerobero', cnic2023: 577575, membre: true, nombreParties2023: 17 },
+  /*{ pseudo: 'Kerobero', cnic2023: 577575, membre: true, nombreParties2023: 17 },
   { pseudo: 'Ataleuse', cnic2023: 557700, membre: true, nombreParties2023: 22 },
   {
     pseudo: 'LaCroustille',
@@ -140,7 +140,7 @@ export const classement2023: Player[] = [
   { pseudo: 'Youbi', cnic2023: 246925, membre: true, nombreParties2023: 11 },
   { pseudo: 'BesJr', cnic2023: 242850, membre: true, nombreParties2023: 12 },
   { pseudo: 'Fafa', cnic2023: 238825, membre: false, nombreParties2023: 10 },
-  { pseudo: 'GregBxst', cnic2023: 237575, membre: true, nombreParties2023: 15 },
+  { pseudo: 'GregBxst', cnic2023: 237375, membre: true, nombreParties2023: 15 },
   { pseudo: 'Nano', cnic2023: 234475, membre: true, nombreParties2023: 14 },
   {
     pseudo: 'Miss Titia',
@@ -228,5 +228,5 @@ export const classement2023: Player[] = [
   { pseudo: 'Patxi', cnic2023: 70000, membre: true, nombreParties2023: 3 },
   { pseudo: 'Yuzuma', cnic2023: 63300, membre: true, nombreParties2023: 5 },
   { pseudo: 'Valouse', cnic2023: 55000, membre: true, nombreParties2023: 3 },
-  { pseudo: 'Snake', cnic2023: 28600, membre: true, nombreParties2023: 6 },
+  { pseudo: 'Snake', cnic2023: 28600, membre: true, nombreParties2023: 6 },*/
 ];
