@@ -1,16 +1,15 @@
 import { Injectable, inject } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Club } from '../model/club';
+import { Contact } from '../model/contact';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CnecService {
+export class ContactService {
   afs = inject(AngularFirestore);
-
-  readClubsCnec() {
-    return this.afs.collection<Club>('clubs', (element) =>
-      element.orderBy('totalPts', 'desc')
+  readContacts() {
+    return this.afs.collection<Contact>('contacts', (element) =>
+      element.orderBy('poste', 'asc')
     );
   }
 }

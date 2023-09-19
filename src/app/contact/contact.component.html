@@ -1,6 +1,16 @@
 <div class="container-contact">
-  <div class="card text-center text-dark">
+  <div
+    class="card text-center text-dark"
+    *ngFor="let contact of contacts$ | async; let i = index"
+  >
     <h5 class="card-header">
+      {{ contact.status }} : {{ contact.prenom }} {{ contact.nom | uppercase }}
+    </h5>
+    <div class="card-body">
+      <p><i class="bi bi-telephone-fill"></i> : 0{{ contact.phone }}</p>
+      <p><i class="bi bi-envelope-fill"></i> : {{ contact.mail }}</p>
+    </div>
+    <!--<h5 class="card-header">
       Président : {{ ombruss.prenom }} {{ ombruss.nom | uppercase }}
     </h5>
     <div class="card-body">
@@ -33,6 +43,6 @@
     <div class="card-body">
       <p><i class="bi bi-telephone-fill"></i> : 0{{ tass.phone }}</p>
       <p><i class="bi bi-envelope-fill"></i> : {{ tass.mail }}</p>
-    </div>
+    </div>-->
   </div>
 </div>

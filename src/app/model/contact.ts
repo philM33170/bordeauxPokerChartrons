@@ -3,4 +3,6 @@ export interface Contact {
   prenom: string;
   phone: number;
   mail: string;
+  poste?: number;
+  status?: string;
 }

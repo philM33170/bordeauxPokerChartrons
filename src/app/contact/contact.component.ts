@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Contact } from '../model/contact';
+import { ContactService } from '../services/contact.service';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent implements OnInit {
-  tass: Contact = {
+export class ContactComponent {
+  /*tass: Contact = {
     nom: 'Bureau',
     prenom: 'Tass',
     phone: 695605126,
@@ -30,8 +33,10 @@ export class ContactComponent implements OnInit {
     prenom: 'Emmanuel',
     phone: 676497928,
     mail: 'e.killherr@gmail.com',
-  };
-  constructor() {}
+  };*/
 
-  ngOnInit(): void {}
+  contactService = inject(ContactService);
+  contactsCollection: AngularFirestoreCollection<Contact> =
+    this.contactService.readContacts();
+  contacts$: Observable<Contact[]> = this.contactsCollection.valueChanges();
 }
