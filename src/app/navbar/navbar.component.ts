@@ -16,8 +16,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.logService.authSubject.subscribe({
       next: (data: boolean) => {
-        console.log(' result : ' + data);
-
         this.isAuthenticated = data;
       },
     });

@@ -1,27 +1,21 @@
-import { Injectable } from '@angular/core';
-import { Administrateur, administrateurs } from '../model/administrateur';
-import { Observable, Subject, of, throwError } from 'rxjs';
+import { Injectable, inject } from '@angular/core';
+import { Subject } from 'rxjs';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/compat/firestore';
+import { User } from '../model/user';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
+  afs = inject(AngularFirestore);
+  afAuth = inject(AngularFireAuth);
   isAuthenticated: boolean = false;
-
   authSubject: Subject<boolean> = new Subject();
   constructor() {}
-
-  checkAdmin(admin: Administrateur): Observable<Administrateur> {
-    if (!administrateurs.some((v) => v.pseudo === admin.pseudo)) {
-      this.isAuthenticated = false;
-      return throwError(() => new Error('Pseudo inexistant !'));
-    } else if (!administrateurs.some((v) => v.password === admin.password)) {
-      this.isAuthenticated = false;
-      return throwError(() => new Error('Mot de passe erroné !'));
-    }
-    this.isAuthenticated = true;
-    return of(admin);
-  }
 
   getIsAuthenticated() {
     this.authSubject.next(this.isAuthenticated);
@@ -30,5 +24,13 @@ export class LoginService {
   onLogout() {
     this.isAuthenticated = false;
     this.authSubject.next(this.isAuthenticated);
+  }
+
+  /*readAdministrateurs(): AngularFirestoreCollection<Administrateur> {
+    return this.afs.collection<Administrateur>('administrateurs');
+  }*/
+
+  checkUser(user: User) {
+    return this.afAuth.signInWithEmailAndPassword(user.email, user.password);
   }
 }

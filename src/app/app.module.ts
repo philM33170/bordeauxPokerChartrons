@@ -33,6 +33,7 @@ import { ForumComponent } from './forum/forum.component';
 //Firebase imports
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import config from '../../my-firestore';
 
 registerLocaleData(localeFr, 'fr');
@@ -64,6 +65,7 @@ registerLocaleData(localeFr, 'fr');
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     ReactiveFormsModule,
     AppRoutingModule,
     CalendarModule.forRoot({

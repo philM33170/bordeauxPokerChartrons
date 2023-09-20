@@ -115,7 +115,7 @@ button[type="submit"]:disabled {
 
 small {
   font-weight: 500;
-  text-transform: lo;
+  /*text-transform:;*/
   font-family: "Quicksand";
   color: rgb(223, 76, 76);
 }

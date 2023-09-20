@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Administrateur } from '../model/administrateur';
 import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +10,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  fb: FormBuilder = inject(FormBuilder);
+  loginService: LoginService = inject(LoginService);
+  router: Router = inject(Router);
   loginForm!: FormGroup;
-  //wrongCredentials = false;
   errorMessage!: string;
-  constructor(
-    private fb: FormBuilder,
-    private loginService: LoginService,
-    private router: Router
-  ) {}
+  //isAuthenticated: boolean = false;
+  constructor() {}
 
   ngOnInit(): void {
     this.initForm();
@@ -25,35 +24,35 @@ export class LoginComponent implements OnInit {
 
   initForm() {
     this.loginForm = this.fb.group({
-      pseudo: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   onSubmitForm() {
-    const pseudo = this.loginForm.get('pseudo')!.value;
+    const email = this.loginForm.get('email')!.value;
     const password = this.loginForm.get('password')!.value;
-    const newAdmin: Administrateur = {
-      pseudo,
+    const newUser: User = {
+      email,
       password,
     };
-    this.login(newAdmin);
+    this.login(newUser);
   }
 
-  login(admin: Administrateur) {
-    //this.wrongCredentials = false;
-    this.loginService.checkAdmin(admin).subscribe(
-      (data) => {
-        //this.router.navigate('');
-        console.log('Vous êtes loggué');
-        console.log(this.loginService.isAuthenticated);
+  login(user: User) {
+    this.loginService
+      .checkUser(user)
+      .then((result) => {
+        this.errorMessage = '';
+        this.loginService.isAuthenticated = true;
+        //isAuthenticated: boolean = true;
+        console.log('result ' + result.user?.email);
         this.router.navigateByUrl('');
-      },
-      (error: Error) => {
-        //this.wrongCredentials = true;
-        this.errorMessage = error.message;
-        console.log(this.loginService.isAuthenticated);
-      }
-    );
+      })
+      .catch((error) => {
+        this.loginService.isAuthenticated = false;
+        //isAuthenticated: boolean = false;
+        this.errorMessage = 'Echec connexion, veuillez réessayer';
+      });
   }
 }

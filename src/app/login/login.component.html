@@ -5,13 +5,13 @@
       <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
         <div class="inputBox">
           <input
-            type="text"
-            name="username"
-            formControlName="pseudo"
-            autocomplete="username"
+            type="email"
+            name="email"
+            formControlName="email"
+            autocomplete="email"
             required
           />
-          <i>Pseudo</i>
+          <i>Email</i>
         </div>
         <div class="inputBox">
           <input
