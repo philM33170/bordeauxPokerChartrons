@@ -1,10 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Subject } from 'rxjs';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from '@angular/fire/compat/firestore';
-import { User } from '../model/user';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
@@ -26,11 +22,7 @@ export class LoginService {
     this.authSubject.next(this.isAuthenticated);
   }
 
-  /*readAdministrateurs(): AngularFirestoreCollection<Administrateur> {
-    return this.afs.collection<Administrateur>('administrateurs');
-  }*/
-
-  checkUser(user: User) {
-    return this.afAuth.signInWithEmailAndPassword(user.email, user.password);
+  async checkUser(email: string, password: string) {
+    return await this.afAuth.signInWithEmailAndPassword(email, password);
   }
 }

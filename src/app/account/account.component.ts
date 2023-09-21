@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from '../services/account.service';
-import { User } from '../model/user';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,6 +23,7 @@ export class AccountComponent implements OnInit {
 
   initForm() {
     this.registrationForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
@@ -32,30 +32,13 @@ export class AccountComponent implements OnInit {
   onSubmitForm() {
     const email = this.registrationForm.get('email')!.value;
     const password = this.registrationForm.get('password')!.value;
-    const newUser: User = {
-      email,
-      password,
-    };
-    //this.createAdmin(newAdmin);
-    this.createUser(newUser);
+    const name = this.registrationForm.get('name')!.value;
+    this.createUser(email, password, name);
   }
 
-  /*createAdmin(admin: Administrateur) {
-    this.accountService.createAdmin(admin).subscribe({
-      next: (data) => {
-        if (data === true) {
-          console.log('création ok' + ' ' + data);
-          console.log(administrateurs);
-        } else {
-          console.log('création ko' + ' ' + data);
-          console.log(administrateurs);
-        }
-      },
-    });
-  }*/
-  createUser(user: User) {
-    this.accountService
-      .register(user.email, user.password)
+  async createUser(email: string, password: string, name: string) {
+    await this.accountService
+      .register(email, password, name)
       .then((result) => {
         this.message = '';
         this.registrationForm.reset();

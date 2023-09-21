@@ -5,6 +5,20 @@
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmitForm()">
         <div class="inputBox">
           <input
+            type="text"
+            name="name"
+            formControlName="name"
+            autocomplete="name"
+            required
+            #name
+          />
+          <i>Pseudo</i>
+        </div>
+        <small *ngIf="name.value.length < 3 ? true : false"
+          >Le pseudo doit contenir 3 caractères minimum</small
+        >
+        <div class="inputBox">
+          <input
             type="email"
             name="email"
             formControlName="email"
