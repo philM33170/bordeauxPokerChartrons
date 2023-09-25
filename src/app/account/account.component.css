@@ -115,7 +115,10 @@ button[type="submit"]:disabled {
 
 small {
   font-weight: 500;
-  /*text-transform:;*/
   font-family: "Quicksand";
   color: rgb(223, 76, 76);
+}
+
+::ng-deep .mat-dialog-container {
+  background-color: burlywood;
 }

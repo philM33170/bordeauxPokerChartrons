@@ -36,6 +36,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import config from '../../my-firestore';
 
+//Angular Material
+import { MatDialogModule } from '@angular/material/dialog';
+
 registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
@@ -68,6 +71,7 @@ registerLocaleData(localeFr, 'fr');
     AngularFireAuthModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    MatDialogModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

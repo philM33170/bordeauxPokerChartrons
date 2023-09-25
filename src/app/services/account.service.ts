@@ -11,13 +11,11 @@ export class AccountService {
   afAuth = inject(AngularFireAuth);
   afs = inject(AngularFirestore);
   result?: User | firebase.auth.UserCredential;
-
   async register(email: string, password: string, name: string) {
     this.result = await this.afAuth.createUserWithEmailAndPassword(
       email,
       password
     );
-    console.log(this.result);
 
     const newUser: User = {
       email,

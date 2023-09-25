@@ -2,6 +2,8 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from '../services/account.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from './modal.component';
 
 @Component({
   selector: 'app-account',
@@ -14,7 +16,7 @@ export class AccountComponent implements OnInit {
   router: Router = inject(Router);
   registrationForm!: FormGroup;
   message: string = '';
-
+  dialog: MatDialog = inject(MatDialog);
   constructor() {}
 
   ngOnInit(): void {
@@ -42,10 +44,17 @@ export class AccountComponent implements OnInit {
       .then((result) => {
         this.message = '';
         this.registrationForm.reset();
+        this.opendialog();
         this.router.navigateByUrl('auth/signin');
       })
       .catch((error) => {
         this.message = 'Echec inscription, veuillez réessayer';
       });
+  }
+
+  opendialog() {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '450px',
+    });
   }
 }
