@@ -13,4 +13,12 @@
   align-items: center;
   font-family: "Poppins", "Inter", Verdana, sans-serif;
   font-weight: 400;
+  font-size: medium;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-family: "Poppins", "Inter", Verdana, sans-serif;
+  font-size: large;
+  font-weight: 500;
 }

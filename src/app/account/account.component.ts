@@ -23,7 +23,10 @@ export class AccountComponent implements OnInit {
     this.initForm();
   }
 
-  initForm() {
+  /**
+   * Définition du formulaire de création de compte
+   */
+  initForm(): void {
     this.registrationForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -31,6 +34,9 @@ export class AccountComponent implements OnInit {
     });
   }
 
+  /**
+   * Récupère les données du formulaire et appel de la fonction createUser()
+   */
   onSubmitForm() {
     const email = this.registrationForm.get('email')!.value;
     const password = this.registrationForm.get('password')!.value;
@@ -38,7 +44,17 @@ export class AccountComponent implements OnInit {
     this.createUser(email, password, name);
   }
 
-  async createUser(email: string, password: string, name: string) {
+  /**
+   * Créer un utilisateur en BDD Firebase
+   * @param email string - email de l'utilisateur
+   * @param password string - mot de passe de l'utilisateur
+   * @param name string - nom de l'utilisateur
+   */
+  async createUser(
+    email: string,
+    password: string,
+    name: string
+  ): Promise<void> {
     await this.accountService
       .register(email, password, name)
       .then((result) => {
@@ -52,6 +68,9 @@ export class AccountComponent implements OnInit {
       });
   }
 
+  /**
+   * Appel de la fonction open() pour ouvrir la modal ModalComponent
+   */
   opendialog() {
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '450px',

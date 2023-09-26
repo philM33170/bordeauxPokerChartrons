@@ -22,7 +22,10 @@ export class NavbarComponent implements OnInit {
     this.logService.getIsAuthenticated();
   }
 
-  onLogout() {
+  /**
+   * Permet la déconnexion de l'utilisateur en appelant la fonction onLogout() de LoginService
+   */
+  onLogout(): void {
     this.logService.onLogout();
   }
 }

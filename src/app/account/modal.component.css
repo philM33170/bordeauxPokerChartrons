@@ -4,11 +4,8 @@
 }
 
 button {
-  width: 100px;
-  height: 30px;
-  background-color: blue;
-  text-align: center;
   font-weight: 700;
+  color: black;
   border-radius: 7px;
   border: solid 2px black;
 }

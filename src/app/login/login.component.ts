@@ -20,27 +20,35 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
   }
-
+  /**
+   * Définition du formulaire de connexion
+   */
   initForm() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
-
+  /**
+   * Récupère les données du formulaire et appel de la fonction login()
+   */
   onSubmitForm() {
     const email = this.loginForm.get('email')!.value;
     const password = this.loginForm.get('password')!.value;
     this.login(email, password);
   }
 
-  async login(email: string, password: string) {
+  /**
+   * Connecter l'utilisateur
+   * @param email string - email de l'utilisateur
+   * @param password string - mot de passe de l'utilisateur
+   */
+  async login(email: string, password: string): Promise<void> {
     await this.loginService
       .checkUser(email, password)
       .then((result) => {
         this.errorMessage = '';
         this.loginService.isAuthenticated = true;
-        console.log('result ' + result.user?.email);
         this.router.navigateByUrl('');
       })
       .catch((error) => {

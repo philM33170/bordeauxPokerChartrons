@@ -119,6 +119,9 @@ small {
   color: rgb(223, 76, 76);
 }
 
+/*-----------------------------------------
+# Définit le background-color de la modal
+------------------------------------------*/
 ::ng-deep .mat-dialog-container {
   background-color: burlywood;
 }

@@ -7,7 +7,10 @@ import { Club } from '../model/club';
 })
 export class CnecService {
   afs = inject(AngularFirestore);
-
+  /**
+   *
+   * @returns Renvoie la liste de tous les clubs de la Table clubs en BDD Firebase par ordre descendant
+   */
   readClubsCnec() {
     return this.afs.collection<Club>('clubs', (element) =>
       element.orderBy('totalPts', 'desc')

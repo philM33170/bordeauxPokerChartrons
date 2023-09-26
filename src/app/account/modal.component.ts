@@ -7,7 +7,9 @@ import { MatDialogRef } from '@angular/material/dialog';
     <div class="container">
       <h1 mat-dialog-title>Inscription Réussie</h1>
       <div mat-dialog-actions>
-        <button (click)="onClick()">FERMER</button>
+        <button class="btn btn-secondary btn-sm" (click)="onClick()">
+          FERMER
+        </button>
       </div>
     </div>
   `,
@@ -16,7 +18,10 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class ModalComponent {
   dialogRef: MatDialogRef<any> = inject(MatDialogRef);
 
-  onClick() {
+  /**
+   * Ferme la modal
+   */
+  onClick(): void {
     this.dialogRef.close();
   }
 }

@@ -1,7 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Player } from '../model/player';
-import { classement2023 } from '../model/player';
-import { Observable, filter, map, of } from 'rxjs';
+import { Observable, filter, map } from 'rxjs';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -13,14 +12,20 @@ import {
 export class ClassementAnnuel2023Service {
   afs = inject(AngularFirestore);
   constructor() {}
-
+  /**
+   *
+   * @returns Récupère et renvoie la Collection triée de tous les joueurs membre du BPC
+   * sous la forme d'un Observable d'Array de Player en appelant la fonction readClassement()
+   */
   getClassement(): Observable<Player[]> {
-    //return of(classement2023);
     return this.readClassement().valueChanges();
   }
-
+  /**
+   *
+   * @returns Récupère et renvoie la Collection triée des Joueurs qui sont éligible CNIC
+   * sous la forme d'un Observable d'Array de Player en appelant la fonction readClassement()
+   */
   getClassementCNIC(): Observable<Player[]> {
-    //return of(classement2023.filter((player) => player.membre === true));
     return this.readClassement()
       .valueChanges()
       .pipe(
@@ -30,6 +35,10 @@ export class ClassementAnnuel2023Service {
       );
   }
 
+  /**
+   *
+   * @returns Renvoie la liste de tous les joueurs de la Table players en BDD Firebase par ordre descendant
+   */
   readClassement(): AngularFirestoreCollection<Player> {
     return this.afs.collection<Player>('players', (element) =>
       element.orderBy('cnic2023', 'desc')

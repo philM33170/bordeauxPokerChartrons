@@ -10,31 +10,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  /*tass: Contact = {
-    nom: 'Bureau',
-    prenom: 'Tass',
-    phone: 695605126,
-    mail: 'tatiana.bureau@gmail.com',
-  };
-  ataleuse: Contact = {
-    nom: 'Batisse',
-    prenom: 'Nadine',
-    phone: 648137189,
-    mail: 'nadine-batisse@outlook.fr',
-  };
-  ombruss: Contact = {
-    nom: 'Irigoyen',
-    prenom: 'Jérémy',
-    phone: 650325627,
-    mail: '',
-  };
-  manukiller: Contact = {
-    nom: 'Killherr',
-    prenom: 'Emmanuel',
-    phone: 676497928,
-    mail: 'e.killherr@gmail.com',
-  };*/
-
   contactService = inject(ContactService);
   contactsCollection: AngularFirestoreCollection<Contact> =
     this.contactService.readContacts();

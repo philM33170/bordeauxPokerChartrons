@@ -46,8 +46,6 @@ button {
 # Pastille d'évènement
 -----------------------------------------*/
 .cal-month-view .cal-event {
-  /*background-color: rgb(138, 42, 223);*/
-  /*background-color: yellow;*/
   background-color: rgb(62, 6, 116);
 }
 

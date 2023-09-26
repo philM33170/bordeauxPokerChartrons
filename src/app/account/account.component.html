@@ -28,12 +28,6 @@
           />
           <i>Email</i>
         </div>
-        <!--<small *ngIf="pseudo.value.length < 3 ? true : false"
-          >L'email doit contenir 3 caractères minimum</small
-        >-->
-        <!--<small *ngIf="registrationForm.controls['email'].errors?.['required']"
-          >Adresse email requise</small
-        > -->
         <small *ngIf="registrationForm.controls['email'].errors"
           >Saisissez une adresse email valide</small
         >
