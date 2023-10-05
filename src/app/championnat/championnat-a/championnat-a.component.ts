@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Player } from 'src/app/model/player';
+import { ChampionnatAService } from './championnat-a.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-championnat-a',
   templateUrl: './championnat-a.component.html',
   styleUrls: ['./championnat-a.component.css'],
 })
-export class ChampionnatAComponent implements OnInit {
-  players: Player[] = [];
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ChampionnatAComponent {
+  championnatAService = inject(ChampionnatAService);
+  players$: Observable<Player[]> = this.championnatAService.getClassement();
 }

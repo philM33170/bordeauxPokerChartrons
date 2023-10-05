@@ -11,7 +11,6 @@ import {
 })
 export class ClassementAnnuel2023Service {
   afs = inject(AngularFirestore);
-  constructor() {}
   /**
    *
    * @returns Récupère et renvoie la Collection triée de tous les joueurs membre du BPC
