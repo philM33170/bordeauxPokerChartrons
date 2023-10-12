@@ -38,6 +38,9 @@ import config from '../../my-firestore';
 
 //Angular Material
 import { MatDialogModule } from '@angular/material/dialog';
+import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
+import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
+import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -62,6 +65,9 @@ registerLocaleData(localeFr, 'fr');
     AccountComponent,
     ResultatComponent,
     ForumComponent,
+    ResultatsChampAComponent,
+    ResultatsChampBComponent,
+    ResultatsChampCComponent,
   ],
   imports: [
     BrowserModule,

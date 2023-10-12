@@ -17,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { ResultatComponent } from './resultats/resultat.component';
 import { ForumComponent } from './forum/forum.component';
+import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
+import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
+import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -31,6 +34,9 @@ const routes: Routes = [
   { path: 'championnatAnnuel', component: ChampionnatAnnuelComponent },
   { path: 'calendrier', component: CalendrierComponent },
   { path: 'resultat', component: ResultatComponent },
+  { path: 'resultatsA', component: ResultatsChampAComponent },
+  { path: 'resultatsB', component: ResultatsChampBComponent },
+  { path: 'resultatsC', component: ResultatsChampCComponent },
   { path: 'auth/signin', component: LoginComponent },
   { path: 'auth/signup', component: AccountComponent },
   { path: 'forum', component: ForumComponent },

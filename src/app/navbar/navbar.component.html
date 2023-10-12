@@ -52,9 +52,37 @@
             </li>
           </ul>
         </li>
-        <li routerLinkActive="active" class="nav-item">
-          <a routerLink="resultat" class="nav-link">Résultats</a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Résultats
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" routerLink="resultatsA"
+                >Résultats Championnat A</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="resultatsB"
+                >Résultats Championnat B</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="resultatsC"
+                >Résultats Championnat C</a
+              >
+            </li>
+          </ul>
         </li>
+        <!--<li routerLinkActive="active" class="nav-item">
+          <a routerLink="resultat" class="nav-link">Résultats</a>
+        </li>-->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
