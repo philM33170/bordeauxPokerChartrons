@@ -15,7 +15,7 @@ import { CalendrierComponent } from './calendrier/calendrier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
-import { ResultatComponent } from './resultats/resultat/resultat.component';
+import { ResultatComponent } from './resultats/resultat.component';
 import { ForumComponent } from './forum/forum.component';
 
 const routes: Routes = [

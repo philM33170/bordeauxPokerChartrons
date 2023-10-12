@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  contactService = inject(ContactService);
+  private readonly contactService = inject(ContactService);
   contactsCollection: AngularFirestoreCollection<Contact> =
     this.contactService.readContacts();
   contacts$: Observable<Contact[]> = this.contactsCollection.valueChanges();

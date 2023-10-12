@@ -11,12 +11,12 @@ import { ModalComponent } from './modal.component';
   styleUrls: ['./account.component.css'],
 })
 export class AccountComponent implements OnInit {
-  fb: FormBuilder = inject(FormBuilder);
-  accountService: AccountService = inject(AccountService);
-  router: Router = inject(Router);
+  private readonly fb: FormBuilder = inject(FormBuilder);
+  private readonly accountService: AccountService = inject(AccountService);
+  private readonly router: Router = inject(Router);
   registrationForm!: FormGroup;
   message: string = '';
-  dialog: MatDialog = inject(MatDialog);
+  private readonly dialog: MatDialog = inject(MatDialog);
   constructor() {}
 
   ngOnInit(): void {

@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  private logService = inject(LoginService);
+  private readonly logService = inject(LoginService);
   subscription!: Subscription;
   isAuthenticated!: boolean; //= this.logService.getIsAuthenticated()
   constructor() {}

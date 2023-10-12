@@ -9,6 +9,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./championnat-a.component.css'],
 })
 export class ChampionnatAComponent {
-  championnatAService = inject(ChampionnatAService);
+  private readonly championnatAService = inject(ChampionnatAService);
   players$: Observable<Player[]> = this.championnatAService.getClassement();
 }

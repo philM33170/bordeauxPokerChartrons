@@ -27,7 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './account/account.component';
-import { ResultatComponent } from './resultats/resultat/resultat.component';
+import { ResultatComponent } from './resultats/resultat.component';
 import { ForumComponent } from './forum/forum.component';
 
 //Firebase imports

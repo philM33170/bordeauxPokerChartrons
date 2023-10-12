@@ -16,7 +16,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent {
-  dialogRef: MatDialogRef<any> = inject(MatDialogRef);
+  private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
 
   /**
    * Ferme la modal

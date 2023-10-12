@@ -9,7 +9,7 @@ import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2
   styleUrls: ['./classement2023.component.css'],
 })
 export class Classement2023Component {
-  classementService = inject(ClassementAnnuel2023Service);
+  private readonly classementService = inject(ClassementAnnuel2023Service);
   players$: Observable<Player[]> = this.classementService.getClassement();
   constructor() {}
 }

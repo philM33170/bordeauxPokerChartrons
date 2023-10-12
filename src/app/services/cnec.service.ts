@@ -1,5 +1,8 @@
 import { Injectable, inject } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/compat/firestore';
 import { Club } from '../model/club';
 
 @Injectable({
@@ -11,7 +14,7 @@ export class CnecService {
    *
    * @returns Renvoie la liste de tous les clubs de la Table clubs en BDD Firebase par ordre descendant
    */
-  readClubsCnec() {
+  readClubsCnec(): AngularFirestoreCollection<Club> {
     return this.afs.collection<Club>('clubs', (element) =>
       element.orderBy('totalPts', 'desc')
     );

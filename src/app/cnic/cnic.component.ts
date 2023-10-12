@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./cnic.component.css'],
 })
 export class CnicComponent {
-  classementService = inject(ClassementAnnuel2023Service);
+  private readonly classementService = inject(ClassementAnnuel2023Service);
   players$: Observable<Player[]> = this.classementService.getClassementCNIC();
   constructor() {}
 }

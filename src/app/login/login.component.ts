@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  fb: FormBuilder = inject(FormBuilder);
-  loginService: LoginService = inject(LoginService);
-  router: Router = inject(Router);
+  private readonly fb: FormBuilder = inject(FormBuilder);
+  private readonly loginService: LoginService = inject(LoginService);
+  private readonly router: Router = inject(Router);
   loginForm!: FormGroup;
   errorMessage!: string;
   //isAuthenticated: boolean = false;

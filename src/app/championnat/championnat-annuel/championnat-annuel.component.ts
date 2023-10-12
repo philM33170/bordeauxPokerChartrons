@@ -9,7 +9,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./championnat-annuel.component.css'],
 })
 export class ChampionnatAnnuelComponent {
-  championnatAnnuel2024Service = inject(ChampionnatAnnuel2024Service);
+  private readonly championnatAnnuel2024Service = inject(
+    ChampionnatAnnuel2024Service
+  );
   players$: Observable<Player[]> =
     this.championnatAnnuel2024Service.getClassement();
 }

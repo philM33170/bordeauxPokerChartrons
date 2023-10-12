@@ -10,7 +10,7 @@ import { CnecService } from '../services/cnec.service';
   styleUrls: ['./cnec.component.css'],
 })
 export class CnecComponent {
-  cnecService = inject(CnecService);
+  private readonly cnecService = inject(CnecService);
   clubsCollection: AngularFirestoreCollection<Club> =
     this.cnecService.readClubsCnec();
   clubs$: Observable<Club[]> = this.clubsCollection.valueChanges();
