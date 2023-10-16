@@ -41,6 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -68,6 +69,7 @@ registerLocaleData(localeFr, 'fr');
     ResultatsChampBComponent,
     ResultatsChampCComponent,
     CnecNationale2023Component,
+    MentionsComponent,
   ],
   imports: [
     BrowserModule,

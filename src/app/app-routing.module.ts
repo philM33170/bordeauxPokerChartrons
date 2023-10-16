@@ -20,6 +20,7 @@ import { ForumComponent } from './forum/forum.component';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
+import { MentionsComponent } from './mentions/mentions.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'auth/signin', component: LoginComponent },
   { path: 'auth/signup', component: AccountComponent },
   { path: 'forum', component: ForumComponent },
+  { path: 'mentions', component: MentionsComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

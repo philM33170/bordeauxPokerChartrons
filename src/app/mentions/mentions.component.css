@@ -1,0 +1,15 @@
+.container {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+h1 {
+  font-family: "Poppins", "Inter", Verdana, sans-serif;
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-decoration: underline;
+}
