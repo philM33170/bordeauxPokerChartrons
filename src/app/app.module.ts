@@ -9,7 +9,8 @@ import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CnicComponent } from './cnic/cnic.component';
-import { CnecComponent } from './cnec/cnec.component';
+import { CnecRegionale2023Component } from './cnec/cnec-negionale2023/cnecRegionale2023.component';
+import { CnecNationale2023Component } from './cnec/cnec-nationale2023/cnecNationale2023.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { Classement2023Component } from './archives/classement2023/classement2023.component';
 import { ChampionnatAComponent } from './championnat/championnat-a/championnat-a.component';
@@ -27,7 +28,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './account/account.component';
-import { ResultatComponent } from './resultats/resultat.component';
 import { ForumComponent } from './forum/forum.component';
 
 //Firebase imports
@@ -52,7 +52,7 @@ registerLocaleData(localeFr, 'fr');
     NavbarComponent,
     AccueilComponent,
     CnicComponent,
-    CnecComponent,
+    CnecRegionale2023Component,
     FooterComponent,
     Classement2023Component,
     ChampionnatAComponent,
@@ -63,11 +63,11 @@ registerLocaleData(localeFr, 'fr');
     PageNotFoundComponent,
     LoginComponent,
     AccountComponent,
-    ResultatComponent,
     ForumComponent,
     ResultatsChampAComponent,
     ResultatsChampBComponent,
     ResultatsChampCComponent,
+    CnecNationale2023Component,
   ],
   imports: [
     BrowserModule,

@@ -104,8 +104,31 @@
         <li routerLinkActive="active" class="nav-item">
           <a routerLink="cnic" class="nav-link">CNIC</a>
         </li>
-        <li routerLinkActive="active" class="nav-item">
+        <!--<li routerLinkActive="active" class="nav-item">
           <a routerLink="cnec" class="nav-link">CNEC</a>
+        </li>-->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            CNEC
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" routerLink="cnecNationale"
+                >Finale Nationale</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="cnecRegionale"
+                >Finale Régionale</a
+              >
+            </li>
+          </ul>
         </li>
         <li routerLinkActive="active" class="nav-item">
           <a routerLink="contact" class="nav-link">Contact</a>

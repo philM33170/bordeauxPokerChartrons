@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+/*import { Component, OnInit, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Resultats } from 'src/app/model/resultats';
 import { ResultatsService } from './resultats.service';
@@ -31,7 +31,7 @@ export class ResultatComponent implements OnInit {
     })
     .pipe();
   ngOnInit(): void {
-    /*this.resultatService.getResultats().subscribe({
+    this.resultatService.getResultats().subscribe({
       next: (data) => {
         console.log(data);
 
@@ -53,9 +53,9 @@ export class ResultatComponent implements OnInit {
         console.log(this.tournois.length);
       },
     });
-    /*this.result$.subscribe({
+    this.result$.subscribe({
       next: (data) => (this.resultat = data),
-    });*/
+    });
     //this.getTournois();
     //this.getTournoi();
   }
@@ -67,4 +67,4 @@ export class ResultatComponent implements OnInit {
     console.log(this.tournois);
   }
   getTournoi() {}
-}
+}*/

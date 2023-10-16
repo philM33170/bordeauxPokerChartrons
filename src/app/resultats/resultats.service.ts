@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+/*import { Injectable, inject } from '@angular/core';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -37,12 +37,12 @@ export class ResultatsService {
           })
         )
       );*/
-    //map((data) => (this.resultats = data))
-    /*map((resultats) =>
+//map((data) => (this.resultats = data))
+/*map((resultats) =>
           resultats.map((resultat) => this.resultats.push(resultat))
         ),
 
     //();
-    //return this.resultats;*/
+    //return this.resultats;
   }
-}
+}*/
