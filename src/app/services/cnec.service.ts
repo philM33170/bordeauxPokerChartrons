@@ -12,10 +12,19 @@ export class CnecService {
   afs = inject(AngularFirestore);
   /**
    *
-   * @returns Renvoie la liste de tous les clubs de la Table clubs en BDD Firebase par ordre descendant
+   * @returns Renvoie la liste des clubs de la Table clubs en BDD Firebase par ordre descendant
    */
-  readClubsCnec(): AngularFirestoreCollection<Club> {
+  readClubsCnecRegionale(): AngularFirestoreCollection<Club> {
     return this.afs.collection<Club>('clubs', (element) =>
+      element.orderBy('totalPts', 'desc')
+    );
+  }
+  /**
+   *
+   * @returns Renvoie la liste des clubs de la Table finaleCNEC2023 en BDD Firebase par ordre descendant
+   */
+  readClubsCnecNationale() {
+    return this.afs.collection<Club>('finaleCNEC2023', (element) =>
       element.orderBy('totalPts', 'desc')
     );
   }
