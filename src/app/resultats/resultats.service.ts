@@ -18,7 +18,10 @@ export class ResultatsService {
   resultats: Resultats[] = [];
   tournois: Tournoi[] = [];
   readResultats(): AngularFirestoreCollection<Participant> {
-    return this.afs.collection<Participant>('resultats/champA/side1');
+    return this.afs.collection<Participant>(
+      'resultats/champA/main1',
+      (element) => element.orderBy('position', 'asc')
+    );
   }
   readResult(): AngularFirestoreCollection<Tournoi> {
     return this.afs.collection<Tournoi>('resultats');

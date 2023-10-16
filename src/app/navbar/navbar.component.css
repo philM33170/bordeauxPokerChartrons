@@ -2,3 +2,29 @@
   width: 100%;
   font-family: "Poppins", "Inter", Verdana, sans-serif;
 }
+ul {
+  list-style: none;
+  display: inline-block;
+}
+
+ul > li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  border: var(--border-size) solid;
+  cursor: pointer;
+}
+
+li > ul {
+  position: absolute;
+  top: calc(100% + var(--border-size));
+  left: calc(var(--border-size) * -1);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: all ease-in 200ms 50ms;
+}
+
+li:hover > ul {
+  transform: scale(1, 1);
+}

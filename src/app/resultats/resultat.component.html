@@ -10,15 +10,15 @@
         </tr>
       </thead>
       <tbody>
-        <!--<tr
+        <tr
           table="table-active"
           *ngFor="let result of resultats$ | async; let i = index"
         >
           <th scope="row">{{ i + 1 }}</th>
           <td>{{ result.pseudo }}</td>
           <td>{{ result.points }} PTS</td>
-        </tr>-->
-        <ng-container *ngFor="let tournoi of result$ | async; let i = index">
+        </tr>
+        <!--<ng-container *ngFor="let tournoi of result$ | async; let i = index">
           <tr
             table="table-active"
             *ngFor="let player of tournoi.main1; let i = index"
@@ -27,7 +27,7 @@
             <td>{{ player.pseudo }}</td>
             <td>{{ player.points }} PTS</td>
           </tr>
-        </ng-container>
+        </ng-container>-->
         <!--<p>Résult</p>
         <div *ngFor="let tournoi of result$ | async; let i = index">
           {{ tournoi.date }}

@@ -1,1 +1,191 @@
-<p>resultats-champ-a works!</p>
+<ng-container>
+  <div class="container">
+    <h1>{{ title | uppercase }}</h1>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main1"
+      aria-expanded="false"
+      aria-controls="main1"
+    >
+      Main Event 1 (07 et 14 septembre 2023)
+    </button>
+    <div class="collapse" id="main1">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsMain1$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side1"
+      aria-expanded="false"
+      aria-controls="side1"
+    >
+      Side Event 1 (14 septembre 2023)
+    </button>
+    <div class="collapse" id="side1">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsSide1$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main2"
+      aria-expanded="false"
+      aria-controls="main2"
+    >
+      Main Event 2 (21 et 28 septembre 2023)
+    </button>
+    <div class="collapse" id="main2">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsMain2$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side2"
+      aria-expanded="false"
+      aria-controls="side2"
+    >
+      Side Event 2 (28 septembre 2023)
+    </button>
+    <div class="collapse" id="side2">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsSide2$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main3"
+      aria-expanded="false"
+      aria-controls="main3"
+    >
+      Main Event 3 (05 et 12 octobre 2023)
+    </button>
+    <div class="collapse" id="main3">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsMain3$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side3"
+      aria-expanded="false"
+      aria-controls="side3"
+    >
+      Side Event 3 (12 octobre 2023)
+    </button>
+    <div class="collapse" id="side3">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsSide3$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>

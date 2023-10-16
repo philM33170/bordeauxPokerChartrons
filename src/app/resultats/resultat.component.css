@@ -16,6 +16,9 @@ table {
   font-weight: 400;
 }
 
+th {
+  text-align: center;
+}
 td {
   text-align: center;
   color: orange;

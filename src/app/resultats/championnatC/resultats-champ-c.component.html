@@ -1,1 +1,197 @@
-<p>resultats-champ-c works!</p>
+<ng-container>
+  <div class="container">
+    <h1>{{ title | uppercase }}</h1>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main1"
+      aria-expanded="false"
+      aria-controls="main1"
+      (click)="getResultat('main1')"
+    >
+      Main Event 1 ()
+    </button>
+    <div class="collapse" id="main1">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side1"
+      aria-expanded="false"
+      aria-controls="side1"
+      (click)="getResultat('side1')"
+    >
+      Side Event 1 ()
+    </button>
+    <div class="collapse" id="side1">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main2"
+      aria-expanded="false"
+      aria-controls="main2"
+      (click)="getResultat('main2')"
+    >
+      Main Event 2 ()
+    </button>
+    <div class="collapse" id="main2">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side2"
+      aria-expanded="false"
+      aria-controls="side2"
+      (click)="getResultat('side2')"
+    >
+      Side Event 2 ()
+    </button>
+    <div class="collapse" id="side2">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main3"
+      aria-expanded="false"
+      aria-controls="main3"
+      (click)="getResultat('main3')"
+    >
+      Main Event 3 ()
+    </button>
+    <div class="collapse" id="main3">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side3"
+      aria-expanded="false"
+      aria-controls="side3"
+      (click)="getResultat('side3')"
+    >
+      Side Event 3 ()
+    </button>
+    <div class="collapse" id="side3">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultats$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>
