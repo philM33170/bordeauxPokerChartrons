@@ -12,6 +12,11 @@ export class ResultatsChampAService {
   afs = inject(AngularFirestore);
 
   constructor() {}
+  /**
+   * @description Appel de la BDD Firebase afin de récupérer la collection correspondant au tournoi souhaité.
+   * @param string - nom du tournoi.
+   * @returns Renvoie le classement du tournoi donnée en paramètre par ordre ascendant de la propriété position.
+   */
   readResultats(
     nom_du_tournoi: string
   ): AngularFirestoreCollection<Participant> {

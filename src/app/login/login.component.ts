@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     this.initForm();
   }
   /**
-   * Définition du formulaire de connexion
+   * @description Définition du formulaire de connexion.
    */
   initForm() {
     this.loginForm = this.fb.group({
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     });
   }
   /**
-   * Récupère les données du formulaire et appel de la fonction login()
+   * @description Récupère les données du formulaire et appel de la fonction login().
    */
   onSubmitForm() {
     const email = this.loginForm.get('email')!.value;
@@ -39,9 +39,9 @@ export class LoginComponent implements OnInit {
   }
 
   /**
-   * Connecter l'utilisateur
-   * @param email string - email de l'utilisateur
-   * @param password string - mot de passe de l'utilisateur
+   * @description Permet de connecter l'utilisateur.
+   * @param email string - email de l'utilisateur.
+   * @param password string - mot de passe de l'utilisateur.
    */
   async login(email: string, password: string): Promise<void> {
     await this.loginService

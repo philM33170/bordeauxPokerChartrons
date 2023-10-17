@@ -17,12 +17,5 @@ export class ResultatsChampCComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  async getResultat(nom_du_tournoi: string) {
-    /*if (this.resultats$ == undefined) {
-      this.tournoisCollection = await this.resultatService.readResultats(
-        nom_du_tournoi
-      );
-      this.resultats$ = this.tournoisCollection.valueChanges();
-    }*/
-  }
+  async getResultat(nom_du_tournoi: string) {}
 }

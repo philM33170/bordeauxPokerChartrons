@@ -10,5 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class ChampionnatAComponent {
   private readonly championnatAService = inject(ChampionnatAService);
+  /**
+   * @description Représente le classement du champA du BPC.
+   */
   players$: Observable<Player[]> = this.championnatAService.getClassement();
 }

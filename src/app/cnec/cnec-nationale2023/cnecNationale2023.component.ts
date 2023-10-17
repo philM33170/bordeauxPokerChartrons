@@ -10,6 +10,9 @@ import { CnecService } from 'src/app/services/cnec.service';
 })
 export class CnecNationale2023Component {
   private readonly cnecService = inject(CnecService);
+  /**
+   * @description Représente le classement de la finale nationale CNEC 2023.
+   */
   clubs$: Observable<Club[]> = this.cnecService
     .readClubsCnecNationale()
     .valueChanges();

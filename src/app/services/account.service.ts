@@ -11,12 +11,11 @@ export class AccountService {
   afAuth = inject(AngularFireAuth);
   afs = inject(AngularFirestore);
   result?: User | firebase.auth.UserCredential;
-
   /**
-   *
-   * @param email string - email de l'utilisateur
-   * @param password string - mot de passe de l'utilisateur
-   * @param name string - nom de l'utilisateur
+   * @description Permet l'enregistrement de l'utilisateur en BDD Firebase.
+   * @param email string - email de l'utilisateur.
+   * @param password string - mot de passe de l'utilisateur.
+   * @param name string - nom de l'utilisateur.
    * @returns
    */
   async register(

@@ -12,6 +12,9 @@ export class ChampionnatAnnuelComponent {
   private readonly championnatAnnuel2024Service = inject(
     ChampionnatAnnuel2024Service
   );
+  /**
+   * @description Représente le classement annuel du BPC.
+   */
   players$: Observable<Player[]> =
     this.championnatAnnuel2024Service.getClassement();
 }

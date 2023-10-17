@@ -9,12 +9,10 @@ import { LoginService } from './services/login.service';
 export class AppComponent implements OnInit {
   title = 'bpc';
   active: string | undefined;
-
   constructor(private logService: LoginService) {}
   ngOnInit() {
     this.active = 'affiche';
   }
-
   updateActive() {
     this.active = 'not affiche';
     this.logService.getIsAuthenticated();

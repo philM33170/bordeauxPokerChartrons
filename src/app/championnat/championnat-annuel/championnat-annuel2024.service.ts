@@ -12,17 +12,15 @@ import { Player } from 'src/app/model/player';
 export class ChampionnatAnnuel2024Service {
   afs = inject(AngularFirestore);
   /**
-   *
-   * @returns Récupère et renvoie la Collection triée de tous les joueurs membre du BPC
-   * sous la forme d'un Observable d'Array de Player en appelant la fonction readClassement()
+   * @description Appel de la fonction readClassemenr().
+   * @returns Renvoie le classement annuel du BPC sous la forme d'un Observable d'Array de Player.
    */
   getClassement(): Observable<Player[]> {
     return this.readClassement().valueChanges();
   }
   /**
-   *
-   * @returns Renvoie la liste de tous les joueurs de la Table players2024 en BDD Firebase
-   * trié via le champ ptsAnnuel par ordre descendant
+   * @description Appel de la collection players2024 en BDD Firebase.
+   * @returns Renvoie le classement annuel du BPC par ordre descendant de la propriété ptsAnnuel.
    */
   readClassement(): AngularFirestoreCollection<Player> {
     return this.afs.collection<Player>('players2024', (element) =>

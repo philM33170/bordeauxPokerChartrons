@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Contact } from '../model/contact';
 import { ContactService } from '../services/contact.service';
-import { AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,7 +10,10 @@ import { Observable } from 'rxjs';
 })
 export class ContactComponent {
   private readonly contactService = inject(ContactService);
-  contactsCollection: AngularFirestoreCollection<Contact> =
-    this.contactService.readContacts();
-  contacts$: Observable<Contact[]> = this.contactsCollection.valueChanges();
+  /**
+   * @description Représente la liste des membres du bureau du BPC.
+   */
+  contacts$: Observable<Contact[]> = this.contactService
+    .readContacts()
+    .valueChanges();
 }

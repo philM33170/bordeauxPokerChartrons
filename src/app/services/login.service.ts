@@ -9,18 +9,21 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class LoginService {
   afs = inject(AngularFirestore);
   afAuth = inject(AngularFireAuth);
+  /**
+   * @description Variable booleen qui vaut true si l'utilisateur est connecté.
+   */
   isAuthenticated: boolean = false;
   authSubject: Subject<boolean> = new Subject();
   constructor() {}
   /**
-   * Vérifie si l'utilisateur est connecté
+   * @description Vérifie si l'utilisateur est connecté.
    */
   getIsAuthenticated() {
     this.authSubject.next(this.isAuthenticated);
   }
 
   /**
-   * Déconnecte l'utilisateur
+   * @description Déconnecte l'utilisateur.
    */
   onLogout(): void {
     this.isAuthenticated = false;
@@ -28,10 +31,10 @@ export class LoginService {
   }
 
   /**
-   *
-   * @param email string - email de l'utilisateur
-   * @param password string - mot de passe de l'utilisateur
-   * @returns Renvoie une Promise qui sera en succès si l'utilisateur existe en BDD
+   * @description Appel en BDD Firebase pour vérifier si l'utilisateur existe.
+   * @param email string - email de l'utilisateur.
+   * @param password string - mot de passe de l'utilisateur.
+   * @returns Renvoie une Promise qui sera en succès si l'utilisateur existe en BDD.
    */
   async checkUser(email: string, password: string) {
     return await this.afAuth.signInWithEmailAndPassword(email, password);
