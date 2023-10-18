@@ -21,6 +21,7 @@ import { ResultatsChampAComponent } from './resultats/championnatA/resultats-cha
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
 import { MentionsComponent } from './mentions/mentions.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'auth/signin', component: LoginComponent },
   { path: 'auth/signup', component: AccountComponent },
   { path: 'forum', component: ForumComponent },
+  { path: 'auth/signin/forgot-password', component: ForgotPasswordComponent },
   { path: 'mentions', component: MentionsComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

@@ -39,4 +39,15 @@ export class LoginService {
   async checkUser(email: string, password: string) {
     return await this.afAuth.signInWithEmailAndPassword(email, password);
   }
+  /**
+   * @description Appel de la fonction sendPasswordResetEmail() de Firebase pour demander
+   * l'envoi d'un mail de réinitialisation du mdp.
+   * @param email string - email de l'utilisateur
+   * @returns Renvoie une Promise qui sera en succès si le mail de réinitialisation du mdp a été envoyé.
+   */
+  sendPasswordResetEmail(email: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.afAuth.sendPasswordResetEmail(email).then(resolve).catch(reject);
+    });
+  }
 }

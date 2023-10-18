@@ -42,6 +42,7 @@ import { ResultatsChampAComponent } from './resultats/championnatA/resultats-cha
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
 import { MentionsComponent } from './mentions/mentions.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -70,6 +71,7 @@ registerLocaleData(localeFr, 'fr');
     ResultatsChampCComponent,
     CnecNationale2023Component,
     MentionsComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,

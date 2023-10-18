@@ -24,9 +24,10 @@
           <i>Mot de passe</i>
         </div>
         <div class="inputBox">
-          <button type="submit" [disabled]="loginForm.invalid">
+          <button class="mb-3" type="submit" [disabled]="loginForm.invalid">
             se connecter
           </button>
+          <a routerLink="forgot-password">Mot de passe oublié</a>
           <small *ngIf="errorMessage">{{ errorMessage }}</small>
         </div>
       </form>
