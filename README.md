@@ -22,7 +22,7 @@ Ayant un profil débutant, ce projet personnel a pour but de m'exercer sur
 
 Ce projet utilise la version 14.0.1 d'Angular ainsi que Bootstrap 5.
 
-Cette version repose essentiellement sur des données static sans base de données associée.
+Cette version utilise la BDD Firebase en back-end.
 
 ## Utilitaires
 

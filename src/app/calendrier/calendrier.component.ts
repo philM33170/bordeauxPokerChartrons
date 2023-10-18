@@ -79,6 +79,11 @@ export class CalendrierComponent {
       end: new Date('2023-10-05T23:30'),
     },
     {
+      title: 'Bordeaux Series 1',
+      start: new Date('2023-10-08T9:30'),
+      end: new Date('2023-10-08T23:30'),
+    },
+    {
       title: 'Champ A Turbo - MTT3',
       start: new Date('2023-10-10T20:00'),
       end: new Date('2023-10-10T23:30'),
@@ -87,11 +92,6 @@ export class CalendrierComponent {
       title: 'Champ A - MTT3 - Day2 + side3',
       start: new Date('2023-10-12T20:00'),
       end: new Date('2023-10-12T23:30'),
-    },
-    {
-      title: 'Bordeaux Series 1',
-      start: new Date('2023-10-15T9:30'),
-      end: new Date('2023-10-15T23:30'),
     },
     {
       title: 'Champ SNG - SNG2',
@@ -144,6 +144,11 @@ export class CalendrierComponent {
       end: new Date('2023-11-16T23:30'),
     },
     {
+      title: 'CFEPA- Manche 1 - Domicile',
+      start: new Date('2023-11-19T9:30'),
+      end: new Date('2023-11-19T23:30'),
+    },
+    {
       title: 'Champ A Turbo - MTT6',
       start: new Date('2023-11-21T20:00'),
       end: new Date('2023-11-21T23:30'),
@@ -189,16 +194,6 @@ export class CalendrierComponent {
       end: new Date('2023-12-14T23:30'),
     },
     {
-      title: 'Champ A Turbo - MTT8',
-      start: new Date('2023-12-19T20:00'),
-      end: new Date('2023-12-19T23:30'),
-    },
-    {
-      title: 'Champ B Turbo - MTT1',
-      start: new Date('2024-01-02T20:00'),
-      end: new Date('2024-01-02T23:30'),
-    },
-    {
       title: 'Champ B - MTT1 - Day1',
       start: new Date('2024-01-04T20:00'),
       end: new Date('2024-01-04T23:30'),
@@ -224,7 +219,12 @@ export class CalendrierComponent {
       end: new Date('2024-01-18T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT2',
+      title: 'CFPA- Manche 2 - Parempuyre',
+      start: new Date('2024-01-21T09:30'),
+      end: new Date('2024-01-21T23:30'),
+    },
+    {
+      title: 'Champ B Turbo - MTT1',
       start: new Date('2024-01-23T20:00'),
       end: new Date('2024-01-23T23:30'),
     },
@@ -234,7 +234,7 @@ export class CalendrierComponent {
       end: new Date('2024-01-25T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT3',
+      title: 'Champ B Turbo - MTT2',
       start: new Date('2024-01-30T20:00'),
       end: new Date('2024-01-30T23:30'),
     },
@@ -245,7 +245,7 @@ export class CalendrierComponent {
     },
     {
       title: 'Bordeaux séries 3',
-      start: new Date('2024-02-04T20:00'),
+      start: new Date('2024-02-04T09:30'),
       end: new Date('2024-02-04T23:30'),
     },
     {
@@ -259,6 +259,11 @@ export class CalendrierComponent {
       end: new Date('2024-02-08T23:30'),
     },
     {
+      title: 'CFPA - Manche 3 - OPC Brive',
+      start: new Date('2024-02-11T09:30'),
+      end: new Date('2024-02-11T23:30'),
+    },
+    {
       title: 'Champ SNG - SNG6',
       start: new Date('2024-02-13T20:00'),
       end: new Date('2024-02-13T23:30'),
@@ -269,7 +274,7 @@ export class CalendrierComponent {
       end: new Date('2024-02-15T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT4',
+      title: 'Champ B Turbo - MTT3',
       start: new Date('2024-02-20T20:00'),
       end: new Date('2024-02-20T23:30'),
     },
@@ -279,7 +284,7 @@ export class CalendrierComponent {
       end: new Date('2024-02-22T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT5',
+      title: 'Champ B Turbo - MTT4',
       start: new Date('2024-02-27T20:00'),
       end: new Date('2024-02-27T23:30'),
     },
@@ -299,6 +304,11 @@ export class CalendrierComponent {
       end: new Date('2024-03-07T23:30'),
     },
     {
+      title: 'CFEPA - Manche 4 - CST Beychac',
+      start: new Date('2024-03-10T09:30'),
+      end: new Date('2024-03-10T23:30'),
+    },
+    {
       title: 'Champ SNG - SNG7',
       start: new Date('2024-03-12T20:00'),
       end: new Date('2024-03-12T23:30'),
@@ -309,7 +319,7 @@ export class CalendrierComponent {
       end: new Date('2024-03-14T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT6',
+      title: 'Champ B Turbo - MTT5',
       start: new Date('2024-03-19T20:00'),
       end: new Date('2024-03-19T23:30'),
     },
@@ -319,9 +329,194 @@ export class CalendrierComponent {
       end: new Date('2024-03-21T23:30'),
     },
     {
-      title: 'Champ B Turbo - MTT7',
+      title: 'CFEPA - Manche 5 - OPC Brive',
+      start: new Date('2024-03-24T09:30'),
+      end: new Date('2024-03-24T23:30'),
+    },
+    {
+      title: 'Champ B Turbo - MTT6',
       start: new Date('2024-03-26T20:00'),
       end: new Date('2024-03-26T23:30'),
+    },
+    {
+      title: 'Champ B - MTT7 - One Day',
+      start: new Date('2024-03-28T20:00'),
+      end: new Date('2024-03-28T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT1',
+      start: new Date('2024-04-02T20:00'),
+      end: new Date('2024-04-02T23:30'),
+    },
+    {
+      title: 'Champ C - MTT1 - Day1',
+      start: new Date('2024-04-04T20:00'),
+      end: new Date('2024-04-04T23:30'),
+    },
+    {
+      title: 'Poker School',
+      start: new Date('2024-04-09T20:00'),
+      end: new Date('2024-04-09T23:30'),
+    },
+    {
+      title: 'Champ C - MTT1 - Day2 + side1',
+      start: new Date('2024-04-11T20:00'),
+      end: new Date('2024-04-11T23:30'),
+    },
+    {
+      title: 'Bordeaux séries 4',
+      start: new Date('2024-04-14T09:30'),
+      end: new Date('2024-04-14T23:30'),
+    },
+    {
+      title: 'Champ SNG - SNG8',
+      start: new Date('2024-04-16T20:00'),
+      end: new Date('2024-04-16T23:30'),
+    },
+    {
+      title: 'Champ C - MTT2 - Day1',
+      start: new Date('2024-04-18T20:00'),
+      end: new Date('2024-04-18T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT2',
+      start: new Date('2024-04-23T20:00'),
+      end: new Date('2024-04-23T23:30'),
+    },
+    {
+      title: 'Champ C - MTT2 - Day2 + side2',
+      start: new Date('2024-04-25T20:00'),
+      end: new Date('2024-04-25T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT3',
+      start: new Date('2024-04-30T20:00'),
+      end: new Date('2024-04-30T23:30'),
+    },
+    {
+      title: 'Champ C - MTT3 - Day1',
+      start: new Date('2024-05-02T20:00'),
+      end: new Date('2024-05-02T23:30'),
+    },
+    {
+      title: 'Poker School',
+      start: new Date('2024-05-07T20:00'),
+      end: new Date('2024-05-07T23:30'),
+    },
+    {
+      title: 'Finale CFIPA - Le havre',
+      start: new Date('2024-05-08T10:00'),
+      end: new Date('2024-05-08T23:30'),
+    },
+    {
+      title: 'Finale CFIPA - Le havre',
+      start: new Date('2024-05-09T10:00'),
+      end: new Date('2024-05-09T23:30'),
+    },
+    {
+      title: 'Finale CFIPA - Le havre',
+      start: new Date('2024-05-10T10:00'),
+      end: new Date('2024-05-10T23:30'),
+    },
+    {
+      title: 'Finale CFIPA - Le havre',
+      start: new Date('2024-05-11T10:00'),
+      end: new Date('2024-05-11T23:30'),
+    },
+    {
+      title: 'Finale CFIPA - Le havre',
+      start: new Date('2024-05-12T10:00'),
+      end: new Date('2024-05-12T23:30'),
+    },
+    {
+      title: 'Champ SNG - SNG9',
+      start: new Date('2024-05-14T20:00'),
+      end: new Date('2024-05-14T23:30'),
+    },
+    {
+      title: 'Champ C - MTT3 - Day2 + side3',
+      start: new Date('2024-05-16T20:00'),
+      end: new Date('2024-05-16T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT4',
+      start: new Date('2024-05-21T20:00'),
+      end: new Date('2024-05-21T23:30'),
+    },
+    {
+      title: 'Champ C - MTT4 - Day1',
+      start: new Date('2024-05-23T20:00'),
+      end: new Date('2024-05-23T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT5',
+      start: new Date('2024-05-28T20:00'),
+      end: new Date('2024-05-28T23:30'),
+    },
+    {
+      title: 'Champ C - MTT4 - Day2 + side4',
+      start: new Date('2024-05-30T20:00'),
+      end: new Date('2024-05-30T23:30'),
+    },
+    {
+      title: 'Bordeaux Series 5',
+      start: new Date('2024-06-02T9:30'),
+      end: new Date('2024-06-02T23:30'),
+    },
+    {
+      title: 'Poker School',
+      start: new Date('2024-06-04T20:00'),
+      end: new Date('2024-06-04T23:30'),
+    },
+    {
+      title: 'Champ C - MTT5 - Day1',
+      start: new Date('2024-06-06T20:00'),
+      end: new Date('2024-06-06T23:30'),
+    },
+    {
+      title: 'CFIPA - Finale Régionale Aquitaine',
+      start: new Date('2024-06-08T9:30'),
+      end: new Date('2024-06-08T23:30'),
+    },
+    {
+      title: 'Champ SNG - SNG10',
+      start: new Date('2024-06-11T20:00'),
+      end: new Date('2024-06-11T23:30'),
+    },
+    {
+      title: 'Champ C - MTT5 - Day2 + side5',
+      start: new Date('2024-06-13T20:00'),
+      end: new Date('2024-06-13T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT6',
+      start: new Date('2024-06-18T20:00'),
+      end: new Date('2024-06-18T23:30'),
+    },
+    {
+      title: 'Champ C - MTT6 - Day1',
+      start: new Date('2024-06-20T20:00'),
+      end: new Date('2024-06-20T23:30'),
+    },
+    {
+      title: 'Champ C Turbo - MTT7',
+      start: new Date('2024-06-25T20:00'),
+      end: new Date('2024-06-25T23:30'),
+    },
+    {
+      title: 'Champ C - MTT6 - Day2 + side6',
+      start: new Date('2024-06-27T20:00'),
+      end: new Date('2024-06-27T23:30'),
+    },
+    {
+      title: "Tournoi de fin d'année - Day1",
+      start: new Date('2024-06-29T09:30'),
+      end: new Date('2024-06-29T23:30'),
+    },
+    {
+      title: "Tournoi de fin d'année - Day2",
+      start: new Date('2024-06-30T10:00'),
+      end: new Date('2024-06-30T23:30'),
     },
   ];
   constructor() {}
