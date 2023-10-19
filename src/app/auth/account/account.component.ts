@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AccountService } from '../services/account.service';
+import { AccountService } from '../../services/account.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal.component';
@@ -20,24 +20,25 @@ export class AccountComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.initForm();
+    this.initRegistrationForm();
   }
 
   /**
-   * @description Définition du formulaire de création de compte.
+   * @description Définition du formulaire de création de compte utilisateur.
    */
-  initForm(): void {
+  initRegistrationForm(): void {
     this.registrationForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
+      cguCheck: [false, [Validators.requiredTrue]],
     });
   }
 
   /**
    * @description Récupère les données du formulaire et appel de la fonction createUser().
    */
-  onSubmitForm() {
+  onSubmitRegistrationForm(): void {
     const email = this.registrationForm.get('email')!.value;
     const password = this.registrationForm.get('password')!.value;
     const name = this.registrationForm.get('name')!.value;
@@ -45,7 +46,8 @@ export class AccountComponent implements OnInit {
   }
 
   /**
-   * @description Permet de créer un utilisateur en BDD Firebase.
+   * @description Appel de la fonction register() de AccountService puis en cas de succès
+   * appel de la fonction opendialog() de la modal et redirection vers la page de connexion du site.
    * @param email string - email de l'utilisateur.
    * @param password string - mot de passe de l'utilisateur.
    * @param name string - nom de l'utilisateur.

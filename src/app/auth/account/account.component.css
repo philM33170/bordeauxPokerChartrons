@@ -119,6 +119,10 @@ small {
   color: rgb(223, 76, 76);
 }
 
+label {
+  color: wheat;
+}
+
 /*-----------------------------------------
 # Définit le background-color de la modal
 ------------------------------------------*/

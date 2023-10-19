@@ -37,7 +37,7 @@ export class ForgotPasswordComponent implements OnInit {
       .sendPasswordResetEmail(this.forgotPasswordForm.value.email)
       .then(() => {
         this.message =
-          "L'email de réinitialisation du mot de passe a été envoyé à votre adresse.";
+          'Un email de réinitialisation du mot de passe a été envoyé à votre adresse.';
       });
   }
 }

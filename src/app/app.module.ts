@@ -24,11 +24,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AccountComponent } from './account/account.component';
+//import { AccountComponent } from './auth/account/account.component';
 import { ForumComponent } from './forum/forum.component';
+import { MentionsComponent } from './mentions/mentions.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
+//Module enfant
+import { AuthModule } from './auth/auth.module';
 
 //Firebase imports
 import { AngularFireModule } from '@angular/fire/compat';
@@ -41,8 +47,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
-import { MentionsComponent } from './mentions/mentions.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -63,8 +67,8 @@ registerLocaleData(localeFr, 'fr');
     ChampionnatAnnuelComponent,
     CalendrierComponent,
     PageNotFoundComponent,
-    LoginComponent,
-    AccountComponent,
+    //LoginComponent,
+    //AccountComponent,
     ForumComponent,
     ResultatsChampAComponent,
     ResultatsChampBComponent,
@@ -81,6 +85,7 @@ registerLocaleData(localeFr, 'fr');
     AngularFireAuthModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    AuthModule,
     MatDialogModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

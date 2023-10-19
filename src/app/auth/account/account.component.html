@@ -2,7 +2,10 @@
   <div class="signup">
     <div class="content">
       <h2>Inscription</h2>
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmitForm()">
+      <form
+        [formGroup]="registrationForm"
+        (ngSubmit)="onSubmitRegistrationForm()"
+      >
         <div class="inputBox">
           <input
             type="text"
@@ -45,6 +48,18 @@
         <small *ngIf="pass.value.length < 6 ? true : false"
           >Le mot de passe doit contenir 6 caractères minimum</small
         >
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="signupCguCheck"
+            formControlName="cguCheck"
+          />
+          <label for="signupCguCheck" class="form-check-label"
+            >En cochant cette case, vous acceptez les mentions légales
+            d'utilisation.</label
+          >
+        </div>
         <div class="inputBox">
           <button type="submit" [disabled]="registrationForm.invalid">
             s'inscrire

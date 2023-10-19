@@ -19,7 +19,7 @@ export class ModalComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
 
   /**
-   * Ferme la modal
+   * Ferme la modal.
    */
   onClick(): void {
     this.dialogRef.close();

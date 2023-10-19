@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { Subscription } from 'rxjs';
 
@@ -7,20 +7,22 @@ import { Subscription } from 'rxjs';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   private readonly logService = inject(LoginService);
-  subscription!: Subscription;
-  isAuthenticated!: boolean; //= this.logService.getIsAuthenticated()
-  constructor() {}
 
-  ngOnInit(): void {
-    this.subscription = this.logService.authSubject.subscribe({
-      next: (data: boolean) => {
-        this.isAuthenticated = data;
-      },
-    });
-    this.logService.getIsAuthenticated();
-  }
+  /**
+   * @description Souscription qui met à jour la variable isAuthenticated.
+   */
+  subscription: Subscription = this.logService.authSubject.subscribe({
+    next: (data: boolean) => {
+      this.isAuthenticated = data;
+    },
+  });
+
+  /**
+   * @description Variable booleen qui émet true si l'utilisateur est connecté.
+   */
+  isAuthenticated!: boolean;
 
   /**
    * @description Permet la déconnexion de l'utilisateur en appelant la fonction onLogout() de LoginService.

@@ -14,8 +14,8 @@ import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c
 import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LoginComponent } from './login/login.component';
-import { AccountComponent } from './account/account.component';
+//import { LoginComponent } from './auth/login/login.component';
+//import { AccountComponent } from './auth/account/account.component';
 import { ForumComponent } from './forum/forum.component';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
@@ -39,8 +39,14 @@ const routes: Routes = [
   { path: 'resultatsA', component: ResultatsChampAComponent },
   { path: 'resultatsB', component: ResultatsChampBComponent },
   { path: 'resultatsC', component: ResultatsChampCComponent },
-  { path: 'auth/signin', component: LoginComponent },
-  { path: 'auth/signup', component: AccountComponent },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
   { path: 'forum', component: ForumComponent },
   { path: 'auth/signin/forgot-password', component: ForgotPasswordComponent },
   { path: 'mentions', component: MentionsComponent },

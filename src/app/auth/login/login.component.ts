@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { LoginService } from '../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,17 +13,19 @@ export class LoginComponent implements OnInit {
   private readonly loginService: LoginService = inject(LoginService);
   private readonly router: Router = inject(Router);
   loginForm!: FormGroup;
+  /**
+   * @description Variable qui représente le message d'erreur en cas d'échec de connexion.
+   */
   errorMessage!: string;
-  //isAuthenticated: boolean = false;
   constructor() {}
 
   ngOnInit(): void {
-    this.initForm();
+    this.initLoginForm();
   }
   /**
    * @description Définition du formulaire de connexion.
    */
-  initForm() {
+  initLoginForm() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -32,7 +34,7 @@ export class LoginComponent implements OnInit {
   /**
    * @description Récupère les données du formulaire et appel de la fonction login().
    */
-  onSubmitForm() {
+  onSubmitLoginForm(): void {
     const email = this.loginForm.get('email')!.value;
     const password = this.loginForm.get('password')!.value;
     this.login(email, password);
@@ -48,11 +50,11 @@ export class LoginComponent implements OnInit {
       .checkUser(email, password)
       .then((result) => {
         this.errorMessage = '';
-        this.loginService.isAuthenticated = true;
+        this.loginService.authSubject.next(true);
         this.router.navigateByUrl('');
       })
       .catch((error) => {
-        this.loginService.isAuthenticated = false;
+        this.loginService.authSubject.next(false);
         this.errorMessage = 'Echec connexion, veuillez réessayer';
       });
   }
