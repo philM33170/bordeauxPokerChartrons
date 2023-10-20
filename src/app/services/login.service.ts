@@ -11,6 +11,9 @@ import { User } from '../model/user';
 export class LoginService {
   afs = inject(AngularFirestore);
   afAuth = inject(AngularFireAuth);
+  /**
+   * @description Subject qui surveille l'état de connexion de l'utilisateur connecté.
+   */
   currentUserSubject = new BehaviorSubject<User | null>(null);
   constructor() {
     this.afAuth.onAuthStateChanged((user) => {
@@ -18,15 +21,10 @@ export class LoginService {
     });
   }
   /**
-   * @description Subject booleen qui émet true si l'utilisateur est connecté.
-   */
-  authSubject: Subject<boolean> = new BehaviorSubject(false);
-
-  /**
-   * @description Déconnecte l'utilisateur, appel le subject pour émettre false.
+   * @description Déconnecte l'utilisateur en appelant la fonction signOut() de Firebase
+   * puis émet la valeur null au subject qui surveille l'état de connexion de l'utilisateur.
    */
   onLogout(): Promise<void> {
-    //this.authSubject.next(false);
     return new Promise((resolve, reject) => {
       this.afAuth.signOut().then(() => {
         this.currentUserSubject.next(null);

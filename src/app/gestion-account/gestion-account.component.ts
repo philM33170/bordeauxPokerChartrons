@@ -9,6 +9,10 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./gestion-account.component.css'],
 })
 export class GestionAccountComponent implements OnInit, OnDestroy {
+  /**
+   * @description Permet de souscrire au subject de loginService
+   * qui surveille l'état de connexion de l'utilisateur.
+   */
   currentUserSubscription!: Subscription;
   currentUser!: User;
   logService: LoginService = inject(LoginService);
@@ -17,10 +21,11 @@ export class GestionAccountComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.initCurrentUser();
   }
+  /**
+   * @description Fonction qui associe currentUserSubscription au currentUserSubject de loginService.
+   *
+   */
   initCurrentUser(): void {
-    /*this.currentUserSubscription = this.logService.authSubject.subscribe({
-      next: user => this.currentUser = <User>user,
-    })*/
     this.currentUserSubscription = this.logService.currentUserSubject.subscribe(
       {
         next: (user) => (this.currentUser = <User>user),

@@ -21,25 +21,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
       }
     );
   }
-  /**
-   * @description Variable booleen qui émet true si l'utilisateur est connecté.
-   */
-  isAuthenticated!: boolean;
 
   /**
-   * @description Souscription qui met à jour la variable isAuthenticated.
-   */
-  subscription: Subscription = this.logService.authSubject.subscribe({
-    next: (data: boolean) => {
-      this.isAuthenticated = data;
-    },
-  });
-
-  /**
-   * @description Permet la déconnexion de l'utilisateur en appelant la fonction onLogout() de LoginService.
+   * @description Permet la déconnexion de l'utilisateur en appelant la fonction onLogout() de LoginService
+   * puis redirige l'utilisateur vers la page de connexion en cas de succès.
    */
   onLogout(): void {
-    //this.logService.onLogout();
     this.logService.onLogout().then(() => {
       this.router.navigate(['auth', 'signin']);
     });

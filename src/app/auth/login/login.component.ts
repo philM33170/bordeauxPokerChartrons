@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   }
 
   /**
-   * @description Permet de connecter l'utilisateur.
+   * @description Permet de connecter l'utilisateur en appelant la fonction checkUser() de loginService.
    * @param email string - email de l'utilisateur.
    * @param password string - mot de passe de l'utilisateur.
    */
@@ -50,11 +50,9 @@ export class LoginComponent implements OnInit {
       .checkUser(email, password)
       .then((result) => {
         this.errorMessage = '';
-        this.loginService.authSubject.next(true);
         this.router.navigateByUrl('');
       })
       .catch((error) => {
-        this.loginService.authSubject.next(false);
         this.errorMessage = 'Echec connexion, veuillez réessayer';
       });
   }

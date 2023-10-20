@@ -1,10 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
-//import { User } from '../model/user';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Utilisateur } from '../model/utilisateur';
-import { User, UserCredentials } from '../model/user';
 
 @Injectable({
   providedIn: 'root',
