@@ -34,7 +34,7 @@
         <small *ngIf="registrationForm.controls['email'].errors"
           >Saisissez une adresse email valide</small
         >
-        <div class="inputBox">
+        <div class="inputBox mb-2">
           <input
             type="password"
             name="password"
@@ -44,10 +44,11 @@
             #pass
           />
           <i>Mot de passe</i>
+          <small *ngIf="pass.value.length < 6 ? true : false"
+            >Le mot de passe doit contenir 6 caractères minimum</small
+          >
         </div>
-        <small *ngIf="pass.value.length < 6 ? true : false"
-          >Le mot de passe doit contenir 6 caractères minimum</small
-        >
+
         <div class="form-check mb-3">
           <input
             type="checkbox"

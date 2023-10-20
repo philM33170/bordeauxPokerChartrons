@@ -28,3 +28,7 @@ li > ul {
 li:hover > ul {
   transform: scale(1, 1);
 }
+
+a {
+  color: gray;
+}

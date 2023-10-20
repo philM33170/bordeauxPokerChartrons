@@ -1,7 +1,4 @@
-/*export interface User {
-  id?: string;
-  email: string;
-  name: string;
-  createdAt: Date;
-  role: string;
-}*/
+import firebase from 'firebase/compat/app';
+export interface User extends firebase.User {}
+
+export interface UserCredentials extends firebase.User {}

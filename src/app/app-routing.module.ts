@@ -47,6 +47,13 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
+  {
+    path: 'account',
+    loadChildren: () =>
+      import('./gestion-account/gestion-account.module').then(
+        (m) => m.GestionAccountModule
+      ),
+  },
   { path: 'forum', component: ForumComponent },
   { path: 'auth/signin/forgot-password', component: ForgotPasswordComponent },
   { path: 'mentions', component: MentionsComponent },

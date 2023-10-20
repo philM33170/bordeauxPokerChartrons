@@ -3,6 +3,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,12 @@ import firebase from 'firebase/compat/app';
 export class LoginService {
   afs = inject(AngularFirestore);
   afAuth = inject(AngularFireAuth);
-
+  currentUserSubject = new BehaviorSubject<User | null>(null);
+  constructor() {
+    this.afAuth.onAuthStateChanged((user) => {
+      this.currentUserSubject.next(user);
+    });
+  }
   /**
    * @description Subject booleen qui émet true si l'utilisateur est connecté.
    */
@@ -19,8 +25,14 @@ export class LoginService {
   /**
    * @description Déconnecte l'utilisateur, appel le subject pour émettre false.
    */
-  onLogout(): void {
-    this.authSubject.next(false);
+  onLogout(): Promise<void> {
+    //this.authSubject.next(false);
+    return new Promise((resolve, reject) => {
+      this.afAuth.signOut().then(() => {
+        this.currentUserSubject.next(null);
+        resolve();
+      });
+    });
   }
 
   /**
