@@ -1,8 +1,9 @@
 import { Injectable, inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
-import { User } from '../model/user';
+//import { User } from '../model/user';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Utilisateur } from '../model/utilisateur';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class AccountService {
   afAuth = inject(AngularFireAuth);
   afs = inject(AngularFirestore);
-  result?: User | firebase.auth.UserCredential;
+  result?: Utilisateur | firebase.auth.UserCredential;
   /**
    * @description Permet la création de compte et l'enregistrement de l'utilisateur en BDD Firebase.
    * @param email string - email de l'utilisateur.
@@ -28,13 +29,13 @@ export class AccountService {
       password
     );
 
-    const newUser: User = {
+    const newUtilisateur: Utilisateur = {
       email,
       name,
       createdAt: new Date(),
       role: 'adhérent',
     };
-    await this.afs.collection<User>('users').add(newUser);
+    await this.afs.collection<Utilisateur>('utilisateurs').add(newUtilisateur);
 
     return this.result;
   }

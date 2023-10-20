@@ -1,7 +1,7 @@
-/*export interface User {
+export interface Utilisateur {
   id?: string;
   email: string;
   name: string;
   createdAt: Date;
   role: string;
-}*/
+}
