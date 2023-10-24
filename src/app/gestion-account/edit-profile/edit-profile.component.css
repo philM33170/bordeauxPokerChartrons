@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.zone {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/*-----------------------------------------
+# Définit le background-color de la modal
+------------------------------------------*/
+/*::ng-deep .mat-dialog-container {
+  background-color: #222;
+}*/
+/*::ng-deep .mat-form-field-label {
+  color: red !important;
+}*/
+
+/*::ng-deep .mat-form-field-underline {
+  background-color: red !important;
+}*/

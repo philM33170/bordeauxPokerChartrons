@@ -1,3 +1,26 @@
-<div class="shadow p-5 bg-white rounded mb-5">
-  <h2 class="" display-6>Profil</h2>
+<div class="containerProfile">
+  <div class="p-5 bg-white rounded mb-5" *ngIf="currentUser">
+    <h2 class="display-6">Profil</h2>
+    <hr class="bg-dark mb-3" />
+    <div class="d-flex mb-3 zone">
+      <p class="fw-bold my-auto">Pseudo</p>
+      <p class="ms-auto my-auto">
+        <span
+          *ngIf="currentUser.displayName && currentUser.displayName !== ''"
+          >{{ currentUser.displayName }}</span
+        >
+      </p>
+      <button class="btn btn-link" (click)="onEditProfile()">Modifier</button>
+    </div>
+    <hr class="bg-dark mb-3" />
+    <div class="d-flex mb-3 zone">
+      <p class="fw-bold my-auto">Adresse email</p>
+      <p class="ms-auto my-auto">
+        <span *ngIf="currentUser.email && currentUser.email !== ''">{{
+          currentUser.email
+        }}</span>
+      </p>
+      <button class="btn btn-link" (click)="onEditEmail()">Modifier</button>
+    </div>
+  </div>
 </div>

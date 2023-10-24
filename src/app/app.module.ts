@@ -43,11 +43,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import config from '../../my-firestore';
 
 //Angular Material
-import { MatDialogModule } from '@angular/material/dialog';
+//import { MatDialogModule } from '@angular/material/dialog';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
-import { GestionAccountComponent } from './gestion-account/gestion-account.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -85,7 +84,6 @@ registerLocaleData(localeFr, 'fr');
     ReactiveFormsModule,
     AppRoutingModule,
     AuthModule,
-    MatDialogModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

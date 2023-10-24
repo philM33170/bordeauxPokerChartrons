@@ -23,6 +23,7 @@ export class LoginService {
   /**
    * @description Déconnecte l'utilisateur en appelant la fonction signOut() de Firebase
    * puis émet la valeur null au subject qui surveille l'état de connexion de l'utilisateur.
+   * @returns Renvoie une Promise.
    */
   onLogout(): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -39,11 +40,19 @@ export class LoginService {
    * @param password string - mot de passe de l'utilisateur.
    * @returns Renvoie une Promise qui sera en succès si l'utilisateur existe en BDD.
    */
-  async checkUser(
+  /*checkUser(
     email: string,
     password: string
   ): Promise<firebase.auth.UserCredential> {
-    return await this.afAuth.signInWithEmailAndPassword(email, password);
+    return this.afAuth.signInWithEmailAndPassword(email, password);
+  }*/
+  checkUser(email: string, password: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.afAuth
+        .signInWithEmailAndPassword(email, password)
+        .then(resolve)
+        .catch(reject);
+    });
   }
 
   /**

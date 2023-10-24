@@ -6,12 +6,34 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditAuthInfosComponent } from './edit-auth-infos/edit-auth-infos.component';
 import { GestionAccountComponent } from './gestion-account.component';
 
+//Modal
+import { ModalEditProfileComponent } from './edit-profile/modal-edit-profile.component';
+import { ModalEditEmailComponent } from './edit-profile/modal-edit-email.component';
+
+//angular Material
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { ModalConfirmProfileComponent } from './edit-profile/modal-confirm-profile.component';
+import { ModalConfirmEmailComponent } from './edit-profile/modal-confirm-email.component';
+
 @NgModule({
   declarations: [
     EditProfileComponent,
     EditAuthInfosComponent,
     GestionAccountComponent,
+    ModalEditProfileComponent,
+    ModalEditEmailComponent,
+    ModalConfirmProfileComponent,
+    ModalConfirmEmailComponent,
   ],
-  imports: [CommonModule, GestionAccountRoutingModule],
+  imports: [
+    CommonModule,
+    GestionAccountRoutingModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
+  ],
+  exports: [],
 })
 export class GestionAccountModule {}

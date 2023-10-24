@@ -45,8 +45,19 @@ export class LoginComponent implements OnInit {
    * @param email string - email de l'utilisateur.
    * @param password string - mot de passe de l'utilisateur.
    */
-  async login(email: string, password: string): Promise<void> {
+  /*async login(email: string, password: string): Promise<void> {
     await this.loginService
+      .checkUser(email, password)
+      .then((result) => {
+        this.errorMessage = '';
+        this.router.navigateByUrl('');
+      })
+      .catch((error) => {
+        this.errorMessage = 'Echec connexion, veuillez réessayer';
+      });
+  }*/
+  login(email: string, password: string): void {
+    this.loginService
       .checkUser(email, password)
       .then((result) => {
         this.errorMessage = '';

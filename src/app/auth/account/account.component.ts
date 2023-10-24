@@ -63,7 +63,7 @@ export class AccountComponent implements OnInit {
         this.message = '';
         this.registrationForm.reset();
         this.opendialog();
-        this.router.navigateByUrl('auth/signin');
+        this.router.navigateByUrl('accueil');
       })
       .catch((error) => {
         this.message = 'Echec inscription, veuillez réessayer';
@@ -73,7 +73,7 @@ export class AccountComponent implements OnInit {
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalComponent.
    */
-  opendialog() {
+  opendialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '450px',
     });

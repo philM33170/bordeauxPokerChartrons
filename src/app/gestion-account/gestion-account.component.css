@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  border: solid blue 2px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+
+app-edit-profile {
+  width: 100%;
+}
+
+app-edit-auth-infos {
+  width: 100%;
+}

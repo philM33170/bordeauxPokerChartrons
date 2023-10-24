@@ -2,10 +2,10 @@ import { Component, inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-modal-component',
+  selector: 'app-modal-confirm-profile',
   template: `
     <div class="container">
-      <h1 mat-dialog-title>Inscription Réussie</h1>
+      <h1 mat-dialog-title>Nouveau pseudo enregistré</h1>
       <div mat-dialog-actions>
         <button
           type="button"
@@ -17,9 +17,9 @@ import { MatDialogRef } from '@angular/material/dialog';
       </div>
     </div>
   `,
-  styleUrls: ['./modal.component.css'],
+  styleUrls: ['./modal-confirm-profile.component.css'],
 })
-export class ModalComponent {
+export class ModalConfirmProfileComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
 
   /**

@@ -123,9 +123,9 @@ label {
   color: wheat;
 }
 
-/*-----------------------------------------
-# Définit le background-color de la modal
-------------------------------------------*/
+/*------------------------------------------
+# Définition du background-color de la modal.
+-------------------------------------------*/
 ::ng-deep .mat-dialog-container {
-  background-color: burlywood;
+  background-color: #222;
 }
