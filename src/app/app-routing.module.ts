@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
-import { AppComponent } from './app.component';
 import { ClubComponent } from './club/club.component';
 import { ContactComponent } from './contact/contact.component';
 import { CnicComponent } from './cnic/cnic.component';
@@ -14,14 +13,13 @@ import { ChampionnatCComponent } from './championnat/championnat-c/championnat-c
 import { ChampionnatAnnuelComponent } from './championnat/championnat-annuel/championnat-annuel.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-//import { LoginComponent } from './auth/login/login.component';
-//import { AccountComponent } from './auth/account/account.component';
 import { ForumComponent } from './forum/forum.component';
 import { ResultatsChampAComponent } from './resultats/championnatA/resultats-champ-a.component';
 import { ResultatsChampBComponent } from './resultats/championnatB/resultats-champ-b.component';
 import { ResultatsChampCComponent } from './resultats/championnatC/resultats-champ-c.component';
 import { MentionsComponent } from './mentions/mentions.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
@@ -49,12 +47,13 @@ const routes: Routes = [
   },
   {
     path: 'account',
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./gestion-account/gestion-account.module').then(
         (m) => m.GestionAccountModule
       ),
   },
-  { path: 'forum', component: ForumComponent },
+  { path: 'forum', canActivate: [AuthGuard], component: ForumComponent },
   { path: 'auth/signin/forgot-password', component: ForgotPasswordComponent },
   { path: 'mentions', component: MentionsComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' },
