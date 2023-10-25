@@ -11,12 +11,16 @@
   align-items: center;
 }
 
+.custom {
+  width: 80px !important;
+}
+
 button {
   font-weight: 400;
   border-radius: 999px;
   color: white;
-  width: 120px;
-  font-size: 17px;
+  /*width: 120px;
+  font-size: 17px;*/
   font-family: "poppins";
 }
 
@@ -25,5 +29,5 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: yellow;
-  font-size: 18px;
+  font-size: 14px;
 }

@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h3 {
   font-weight: 400;
   color: yellow;
 }
 
-button {
-  margin-left: 45%;
+.custom {
+  width: 80px !important;
 }
 
 button.valid {
@@ -24,6 +30,7 @@ button.cancel {
   cursor: pointer;
   text-transform: uppercase;
   font-family: "poppins";
+  margin-left: auto;
 }
 
 button.valid:hover {
@@ -38,32 +45,6 @@ button.cancel:hover {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-/*------------------------------------------
-# Définition du background-color de la modal.
--------------------------------------------*/
-.mat-dialog-container {
-  background-color: #222;
-}
-
-/*-------------------------------------------------------------
-# Définition du style des éléments mat-form d'Angular Material.
---------------------------------------------------------------*/
-.mat-form-field-label {
-  color: yellow !important;
-}
-
-.mat-form-field-underline {
-  background-color: yellow !important;
-}
-
-.mat-form-field-ripple {
-  background-color: orange !important;
-}
-
-/*.mat-focused {
-  color: rgb(225, 220, 231);
-}*/
 
 .ng-dirty,
 .ng-touched {

@@ -118,4 +118,7 @@ small {
   font-family: "Quicksand";
   color: rgb(223, 76, 76);
   display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
 }

@@ -2,6 +2,7 @@
   <div id="cal-buttons">
     <div id="cal-date-nav-buttons">
       <button
+        class="calendar btn btn-sm"
         id="previous"
         mwlCalendarPreviousView
         [(viewDate)]="viewDate"
@@ -14,6 +15,7 @@
         {{ viewDate | calendarDate : view + "ViewTitle" : "fr" | uppercase }}
       </div>
       <button
+        class="calendar btn btn-sm"
         id="next"
         mwlCalendarNextView
         [(viewDate)]="viewDate"

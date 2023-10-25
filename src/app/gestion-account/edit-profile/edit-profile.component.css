@@ -13,16 +13,6 @@
   flex-wrap: wrap;
 }
 
-/*-----------------------------------------
-# Définit le background-color de la modal
-------------------------------------------*/
-/*::ng-deep .mat-dialog-container {
-  background-color: #222;
-}*/
-/*::ng-deep .mat-form-field-label {
-  color: red !important;
-}*/
-
-/*::ng-deep .mat-form-field-underline {
-  background-color: red !important;
-}*/
+h2 {
+  color: black;
+}

@@ -4,6 +4,7 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
+  ViewEncapsulation,
   inject,
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -14,6 +15,7 @@ import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 import { ModalConfirmProfileComponent } from './modal-confirm-profile.component';
 import { ModalConfirmEmailComponent } from './modal-confirm-email.component';
+import { ModalErreurEmailComponent } from './modal-erreur-email.component';
 
 @Component({
   selector: 'app-edit-profile',
@@ -35,6 +37,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalEditProfileComponent
    * puis mise à jour du pseudo de l'utilisateur en BDD Firebase.
+   * @returns void
    */
   onEditProfile(): void {
     const dialogRef = this.dialog.open(ModalEditProfileComponent, {
@@ -58,6 +61,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalEditEmailComponent
    * puis mise à jour de l'email de l'utilisateur en BDD Firebase.
+   * @returns void
    */
   onEditEmail(): void {
     const dialogRef = this.dialog.open(ModalEditEmailComponent, {
@@ -66,7 +70,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
     dialogRef.afterClosed().subscribe((data) => {
       if (data) {
         this.currentUser
-          .verifyBeforeUpdateEmail(data[0])
+          .verifyBeforeUpdateEmail(data)
           .then(() => {
             this.dialog.open(ModalConfirmEmailComponent, {
               width: '450px',
@@ -75,7 +79,11 @@ export class EditProfileComponent implements OnInit, OnChanges {
               this.router.navigate(['auth', 'signin']);
             });
           })
-          .catch(console.error);
+          .catch((error) => {
+            this.dialog.open(ModalErreurEmailComponent, {
+              width: '360px',
+            });
+          });
       }
     });
   }

@@ -133,22 +133,17 @@
       </ul>
     </div>
     <div class="navbar-collapse collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto me-5">
-        <!--navbar-right-->
-        <li routerLinkActive="active" class="nav-item" *ngIf="!currentUser">
+      <!--navbar-right-->
+      <ul class="navbar-nav me-1">
+        <li class="nav-item" *ngIf="!currentUser">
           <a routerLink="auth/signup" class="nav-link">Créer un compte </a>
         </li>
-        <li routerLinkActive="active" class="nav-item" *ngIf="!currentUser">
+        <li class="nav-item" *ngIf="!currentUser">
           <a routerLink="auth/signin" class="nav-link"> Connexion</a>
         </li>
-        <li routerLinkActive="active" class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser">
           <a routerLink="forum" class="nav-link"> Forum</a>
         </li>
-        <!--<li routerLinkActive="active" class="nav-item" *ngIf="isAuthenticated">
-          <a routerLink="auth/signin" (click)="onLogout()" class="nav-link">
-            Déconnexion</a
-          >
-        </li>-->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -161,12 +156,12 @@
             Mon compte
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li routerLinkActive="active" class="nav-item">
-              <a routerLink="account" class="nav-link"> Gestion</a>
+            <li>
+              <a class="dropdown-item" routerLink="account"> Gestion</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
-            <li routerLinkActive="active" class="nav-item">
-              <a (click)="onLogout()" class="nav-link"> Déconnexion</a>
+            <li>
+              <a class="dropdown-item" (click)="onLogout()"> Déconnexion</a>
             </li>
           </ul>
         </li>

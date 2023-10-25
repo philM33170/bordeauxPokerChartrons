@@ -1,11 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewEncapsulation, inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-modal-component',
+  selector: 'app-modal-erreur-email',
   template: `
     <div class="container">
-      <h1 mat-dialog-title>Inscription Réussie</h1>
+      <h2 mat-dialog-title>
+        Veuillez effectuer une deconnexion puis une reconnexion si vous
+        souhaitez modifier votre adresse email.
+      </h2>
       <div mat-dialog-actions>
         <button
           type="button"
@@ -17,9 +20,10 @@ import { MatDialogRef } from '@angular/material/dialog';
       </div>
     </div>
   `,
-  styleUrls: ['./modal.component.css'],
+  styleUrls: ['./modal-erreur-email.component.css'],
+  //encapsulation: ViewEncapsulation.None,
 })
-export class ModalComponent {
+export class ModalErreurEmailComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
 
   /**

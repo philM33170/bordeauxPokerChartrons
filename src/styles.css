@@ -12,6 +12,29 @@ body {
   height: 100%;
 }
 
+/*------------------------------------------
+# Définition du background-color de la modal.
+-------------------------------------------*/
+.mat-dialog-container {
+  background-color: #222;
+  padding: 0;
+}
+
+/*-------------------------------------------------------------
+# Définition du style des éléments mat-form d'Angular Material.
+--------------------------------------------------------------*/
+.mat-form-field-label {
+  color: yellow !important;
+}
+
+.mat-form-field-underline {
+  background-color: yellow !important;
+}
+
+.mat-form-field-ripple {
+  background-color: orange !important;
+}
+
 /*---------------------------------
 # FOOTER
 ---------------------------------*/

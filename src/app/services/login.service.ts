@@ -2,7 +2,6 @@ import { Injectable, inject } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from 'firebase/compat/app';
 import { User } from '../model/user';
 
 @Injectable({
@@ -40,12 +39,6 @@ export class LoginService {
    * @param password string - mot de passe de l'utilisateur.
    * @returns Renvoie une Promise qui sera en succès si l'utilisateur existe en BDD.
    */
-  /*checkUser(
-    email: string,
-    password: string
-  ): Promise<firebase.auth.UserCredential> {
-    return this.afAuth.signInWithEmailAndPassword(email, password);
-  }*/
   checkUser(email: string, password: string): Promise<any> {
     return new Promise((resolve, reject) => {
       this.afAuth

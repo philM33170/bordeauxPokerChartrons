@@ -4,6 +4,7 @@ import { AccountService } from '../../services/account.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal.component';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-account',
@@ -13,6 +14,7 @@ import { ModalComponent } from './modal.component';
 export class AccountComponent implements OnInit {
   private readonly fb: FormBuilder = inject(FormBuilder);
   private readonly accountService: AccountService = inject(AccountService);
+  private readonly loginService: LoginService = inject(LoginService);
   private readonly router: Router = inject(Router);
   registrationForm!: FormGroup;
   message: string = '';
@@ -25,6 +27,7 @@ export class AccountComponent implements OnInit {
 
   /**
    * @description Définition du formulaire de création de compte utilisateur.
+   * @returns void
    */
   initRegistrationForm(): void {
     this.registrationForm = this.fb.group({
@@ -37,6 +40,7 @@ export class AccountComponent implements OnInit {
 
   /**
    * @description Récupère les données du formulaire et appel de la fonction createUser().
+   * @returns void
    */
   onSubmitRegistrationForm(): void {
     const email = this.registrationForm.get('email')!.value;
@@ -51,6 +55,7 @@ export class AccountComponent implements OnInit {
    * @param email string - email de l'utilisateur.
    * @param password string - mot de passe de l'utilisateur.
    * @param name string - nom de l'utilisateur.
+   * @returns Promise<void>
    */
   async createUser(
     email: string,
@@ -63,7 +68,8 @@ export class AccountComponent implements OnInit {
         this.message = '';
         this.registrationForm.reset();
         this.opendialog();
-        this.router.navigateByUrl('accueil');
+        this.loginService.onLogout();
+        this.router.navigate(['auth', 'signin']);
       })
       .catch((error) => {
         this.message = 'Echec inscription, veuillez réessayer';
@@ -72,6 +78,7 @@ export class AccountComponent implements OnInit {
 
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalComponent.
+   * @returns void
    */
   opendialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {

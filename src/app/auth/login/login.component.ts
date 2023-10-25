@@ -59,12 +59,12 @@ export class LoginComponent implements OnInit {
   login(email: string, password: string): void {
     this.loginService
       .checkUser(email, password)
-      .then((result) => {
+      .then(() => {
         this.errorMessage = '';
         this.router.navigateByUrl('');
       })
       .catch((error) => {
-        this.errorMessage = 'Echec connexion, veuillez réessayer';
+        this.errorMessage = 'Echec connexion, veuillez réessayer.';
       });
   }
 }

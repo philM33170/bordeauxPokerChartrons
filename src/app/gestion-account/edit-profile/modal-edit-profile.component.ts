@@ -5,33 +5,39 @@ import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-modal-edit-profile',
   template: `
-    <h3 mat-dialog-title>Veuillez renseigner votre nouveau pseudo :</h3>
+    <h3 mat-dialog-title>Nouveau pseudo</h3>
     <div mat-dialog-content>
       <mat-form-field>
         <mat-label>Pseudo</mat-label>
-        <input matInput [(ngModel)]="pseudo" />
+        <input
+          matInput
+          [(ngModel)]="pseudo"
+          required
+          minlength="3"
+          #name="ngModel"
+        />
       </mat-form-field>
     </div>
     <div mat-dialog-actions>
       <button
-        class="cancel btn btn-danger btn-sm"
+        class="cancel btn btn-danger custom"
         mat-button
         (click)="onNoClick()"
       >
         Annuler
       </button>
       <button
-        class="valid btn btn-success btn-sm"
+        class="valid btn btn-success custom"
         mat-button
         [mat-dialog-close]="pseudo"
-        cdkFocusInitial
+        [disabled]="name.invalid"
       >
         Valider
       </button>
     </div>
   `,
   styleUrls: ['./modal-edit-profile.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class ModalEditProfileComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
@@ -41,6 +47,7 @@ export class ModalEditProfileComponent {
   public pseudo!: string;
   /**
    * @description Fermeture de la modal.
+   * @returns void
    */
   onNoClick(): void {
     this.dialogRef.close();

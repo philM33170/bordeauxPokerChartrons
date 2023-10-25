@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #cal-buttons {
@@ -9,27 +11,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #cal-date-nav-buttons {
   margin: 0;
   padding: 0;
   display: flex;
-  font-size: large;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 
-button {
+.calendar {
   background-color: orange;
-  border-radius: 10px;
+  border-radius: 999px;
   color: black;
   font-weight: 500;
-  border: solid 1px gold;
+}
+
+.calendar:hover {
+  background-color: rgb(252, 164, 3);
+  color: wheat;
 }
 
 #cal-date-field {
   color: white;
-  font-size: x-large;
   font-weight: 500;
 }
 

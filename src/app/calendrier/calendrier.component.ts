@@ -9,8 +9,8 @@ import { isSameDay, isSameMonth } from 'date-fns';
 @Component({
   selector: 'app-calendrier',
   templateUrl: './calendrier.component.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./calendrier.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CalendrierComponent {
   viewDate: Date = new Date();

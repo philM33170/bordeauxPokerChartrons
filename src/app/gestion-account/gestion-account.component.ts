@@ -1,4 +1,10 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { User } from '../model/user';
 import { LoginService } from '../services/login.service';
@@ -23,6 +29,7 @@ export class GestionAccountComponent implements OnInit, OnDestroy {
   }
   /**
    * @description Fonction qui associe currentUserSubscription au currentUserSubject de loginService.
+   * @returns void
    *
    */
   initCurrentUser(): void {

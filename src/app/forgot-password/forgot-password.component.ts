@@ -23,21 +23,23 @@ export class ForgotPasswordComponent implements OnInit {
   }
   /**
    * @description Définition du formulaire de mot de passe oublié.
+   * @returns void
    */
-  initForgotPasswordForm() {
+  initForgotPasswordForm(): void {
     this.forgotPasswordForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
   }
   /**
    * @description Appel la fonction sendPasswordResetEmail() de loginService pour la réinitialisation du mdp.
+   * @returns void
    */
   onSubmitForgotPasswordForm(): void {
     this.loginService
       .sendPasswordResetEmail(this.forgotPasswordForm.value.email)
       .then(() => {
         this.message =
-          'Un email de réinitialisation du mot de passe a été envoyé à votre adresse.';
+          'Un email de réinitialisation du mot de passe a été envoyé à votre adresse email.';
       });
   }
 }
