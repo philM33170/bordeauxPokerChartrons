@@ -11,6 +11,7 @@ export class AccountService {
   afAuth = inject(AngularFireAuth);
   afs = inject(AngularFirestore);
   result?: Utilisateur | firebase.auth.UserCredential;
+
   /**
    * @description Permet la création de compte et l'enregistrement de l'utilisateur en BDD Firebase.
    * @param email string - email de l'utilisateur.

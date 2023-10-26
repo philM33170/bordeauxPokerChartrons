@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -21,7 +21,6 @@ import { MatDialogRef } from '@angular/material/dialog';
     </div>
   `,
   styleUrls: ['./modal-erreur-password.component.css'],
-  //encapsulation: ViewEncapsulation.None,
 })
 export class ModalErreurPasswordComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);

@@ -4,7 +4,6 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
-  ViewEncapsulation,
   inject,
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -34,6 +33,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {}
 
   ngOnInit(): void {}
+
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalEditProfileComponent
    * puis mise à jour du pseudo de l'utilisateur en BDD Firebase.
@@ -58,6 +58,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
       }
     });
   }
+
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalEditEmailComponent
    * puis mise à jour de l'email de l'utilisateur en BDD Firebase.

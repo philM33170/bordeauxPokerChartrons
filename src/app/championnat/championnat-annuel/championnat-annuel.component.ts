@@ -13,7 +13,7 @@ export class ChampionnatAnnuelComponent {
     ChampionnatAnnuel2024Service
   );
   /**
-   * @description Représente le classement annuel du BPC.
+   * @description Observable qui représente le classement annuel du BPC.
    */
   players$: Observable<Player[]> =
     this.championnatAnnuel2024Service.getClassement();

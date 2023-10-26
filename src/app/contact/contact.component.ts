@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ContactComponent {
   private readonly contactService = inject(ContactService);
   /**
-   * @description Représente la liste des membres du bureau du BPC.
+   * @description Observable qui représente la liste des membres du bureau du BPC.
    */
   contacts$: Observable<Contact[]> = this.contactService
     .readContacts()

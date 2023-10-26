@@ -519,7 +519,6 @@ export class CalendrierComponent {
       end: new Date('2024-06-30T23:30'),
     },
   ];
-  constructor() {}
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {

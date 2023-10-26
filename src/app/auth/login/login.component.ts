@@ -13,15 +13,16 @@ export class LoginComponent implements OnInit {
   private readonly loginService: LoginService = inject(LoginService);
   private readonly router: Router = inject(Router);
   loginForm!: FormGroup;
+
   /**
    * @description Variable qui représente le message d'erreur en cas d'échec de connexion.
    */
   errorMessage!: string;
-  constructor() {}
 
   ngOnInit(): void {
     this.initLoginForm();
   }
+
   /**
    * @description Définition du formulaire de connexion.
    */
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+
   /**
    * @description Récupère les données du formulaire et appel de la fonction login().
    */
@@ -45,17 +47,6 @@ export class LoginComponent implements OnInit {
    * @param email string - email de l'utilisateur.
    * @param password string - mot de passe de l'utilisateur.
    */
-  /*async login(email: string, password: string): Promise<void> {
-    await this.loginService
-      .checkUser(email, password)
-      .then((result) => {
-        this.errorMessage = '';
-        this.router.navigateByUrl('');
-      })
-      .catch((error) => {
-        this.errorMessage = 'Echec connexion, veuillez réessayer';
-      });
-  }*/
   login(email: string, password: string): void {
     this.loginService
       .checkUser(email, password)

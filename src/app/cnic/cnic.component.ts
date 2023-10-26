@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class CnicComponent {
   private readonly classementService = inject(ClassementAnnuel2023Service);
   /**
-   * @description Représente le classement annuel de la saison 2023 du BPC éligible pour le CNIC 2024.
+   * @description Observable qui représente le classement annuel de la saison 2023 du BPC éligible pour le CNIC 2024.
    */
   players$: Observable<Player[]> = this.classementService.getClassementCNIC();
 }

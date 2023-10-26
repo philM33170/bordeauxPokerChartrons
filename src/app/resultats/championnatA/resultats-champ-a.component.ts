@@ -11,38 +11,44 @@ import { Observable } from 'rxjs';
 export class ResultatsChampAComponent {
   title: string = 'Résultats du Championnat A - saison 2023-2024';
   private readonly resultatService = inject(ResultatsChampAService);
+
   /**
-   * @description Représente le classement du tournoi main1 du championnat A.
+   * @description Observable qui représente le classement du tournoi main1 du championnat A.
    */
   resultatsMain1$: Observable<Participant[]> = this.resultatService
     .readResultats('main1')
     .valueChanges();
+
   /**
-   * @description Représente le classement du tournoi side1 du championnat A.
+   * @description Observable qui représente le classement du tournoi side1 du championnat A.
    */
   resultatsSide1$: Observable<Participant[]> = this.resultatService
     .readResultats('side1')
     .valueChanges();
+
   /**
-   * @description Représente le classement du tournoi main2 du championnat A.
+   * @description Observable qui représente le classement du tournoi main2 du championnat A.
    */
   resultatsMain2$: Observable<Participant[]> = this.resultatService
     .readResultats('main2')
     .valueChanges();
+
   /**
-   * @description Représente le classement du tournoi side2 du championnat A.
+   * @description Observable qui représente le classement du tournoi side2 du championnat A.
    */
   resultatsSide2$: Observable<Participant[]> = this.resultatService
     .readResultats('side2')
     .valueChanges();
+
   /**
-   * @description Représente le classement du tournoi main3 du championnat A.
+   * @description Observable qui représente le classement du tournoi main3 du championnat A.
    */
   resultatsMain3$: Observable<Participant[]> = this.resultatService
     .readResultats('main3')
     .valueChanges();
+
   /**
-   * @description Représente le classement du tournoi side3 du championnat A.
+   * @description Observable qui représente le classement du tournoi side3 du championnat A.
    */
   resultatsSide3$: Observable<Participant[]> = this.resultatService
     .readResultats('side3')

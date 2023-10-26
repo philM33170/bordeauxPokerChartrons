@@ -11,16 +11,17 @@ export class ForgotPasswordComponent implements OnInit {
   forgotPasswordForm!: FormGroup;
   private readonly fb: FormBuilder = inject(FormBuilder);
   private readonly loginService: LoginService = inject(LoginService);
+
   /**
    * @description Variable qui représente la confirmation
    * de l'envoi d'un mail pour la réinitialisation du mdp.
    */
   message!: string;
-  constructor() {}
 
   ngOnInit(): void {
     this.initForgotPasswordForm();
   }
+
   /**
    * @description Définition du formulaire de mot de passe oublié.
    * @returns void
@@ -30,6 +31,7 @@ export class ForgotPasswordComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
     });
   }
+
   /**
    * @description Appel la fonction sendPasswordResetEmail() de loginService pour la réinitialisation du mdp.
    * @returns void

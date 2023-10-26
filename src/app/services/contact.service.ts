@@ -7,6 +7,7 @@ import { Contact } from '../model/contact';
 })
 export class ContactService {
   afs = inject(AngularFirestore);
+
   /**
    * @description Appel de la collection contacts en BDD Firebase.
    * @returns Renvoie la liste de tous les membres du bureau du BPC par ordre ascendant de la propriété poste.

@@ -10,6 +10,7 @@ import { User } from '../model/user';
 export class LoginService {
   afs = inject(AngularFirestore);
   afAuth = inject(AngularFireAuth);
+
   /**
    * @description Subject qui surveille l'état de connexion de l'utilisateur connecté.
    */
@@ -19,6 +20,7 @@ export class LoginService {
       this.currentUserSubject.next(user);
     });
   }
+
   /**
    * @description Déconnecte l'utilisateur en appelant la fonction signOut() de Firebase
    * puis émet la valeur null au subject qui surveille l'état de connexion de l'utilisateur.

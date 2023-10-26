@@ -19,7 +19,6 @@ export class AccountComponent implements OnInit {
   registrationForm!: FormGroup;
   message: string = '';
   private readonly dialog: MatDialog = inject(MatDialog);
-  constructor() {}
 
   ngOnInit(): void {
     this.initRegistrationForm();

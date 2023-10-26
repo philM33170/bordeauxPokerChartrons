@@ -11,7 +11,6 @@ import { Participant } from 'src/app/model/participant';
 export class ResultatsChampAService {
   afs = inject(AngularFirestore);
 
-  constructor() {}
   /**
    * @description Appel de la BDD Firebase afin de récupérer la collection correspondant au tournoi souhaité.
    * @param string - nom du tournoi.

@@ -1,6 +1,5 @@
-import { Component, Inject, ViewEncapsulation, inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { MatInputModule } from '@angular/material/input';
+import { Component, inject } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-edit-profile',
@@ -37,14 +36,15 @@ import { MatInputModule } from '@angular/material/input';
     </div>
   `,
   styleUrls: ['./modal-edit-profile.component.css'],
-  //encapsulation: ViewEncapsulation.None,
 })
 export class ModalEditProfileComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);
+
   /**
    * @description Représente le nouveau pseudo saisi par l'utilisateur.
    */
   public pseudo!: string;
+
   /**
    * @description Fermeture de la modal.
    * @returns void

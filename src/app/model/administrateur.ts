@@ -4,7 +4,3 @@ export interface Administrateur {
 
   role?: string;
 }
-
-export const administrateurs: Administrateur[] = [
-  { pseudo: 'JabbaWockeeZ', password: 'killbill', role: 'admin' },
-];

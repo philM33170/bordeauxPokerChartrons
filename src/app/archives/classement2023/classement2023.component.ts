@@ -11,8 +11,7 @@ import { ClassementAnnuel2023Service } from 'src/app/services/classement-annuel2
 export class Classement2023Component {
   private readonly classementService = inject(ClassementAnnuel2023Service);
   /**
-   * @description Représente le classement annuel saison 2023 du BPC.
+   * @description Observable qui représente le classement annuel saison 2023 du BPC.
    */
   players$: Observable<Player[]> = this.classementService.getClassement();
-  constructor() {}
 }

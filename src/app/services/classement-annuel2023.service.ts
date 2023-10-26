@@ -11,6 +11,7 @@ import {
 })
 export class ClassementAnnuel2023Service {
   afs = inject(AngularFirestore);
+
   /**
    * @description Appel de la fonction readClassement().
    * @returns Renvoie la Collection triée de tous les joueurs membre du BPC
@@ -19,6 +20,7 @@ export class ClassementAnnuel2023Service {
   getClassement(): Observable<Player[]> {
     return this.readClassement().valueChanges();
   }
+
   /**
    * @description Appel de la fonction getClassement().
    * @returns Renvoie la Collection triée des Joueurs qui sont éligible CNIC
@@ -33,6 +35,7 @@ export class ClassementAnnuel2023Service {
         )
       );
   }
+
   /**
    * @description Appel de la collection players de la BDD Firebase.
    * @returns Renvoie la liste de tous les joueurs par ordre descendant de la propriété cnic2023.

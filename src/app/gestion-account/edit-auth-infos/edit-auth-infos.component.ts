@@ -17,9 +17,9 @@ export class EditAuthInfosComponent implements OnInit {
   private readonly dialog: MatDialog = inject(MatDialog);
   private readonly logService: LoginService = inject(LoginService);
   private readonly router: Router = inject(Router);
-  constructor() {}
 
   ngOnInit(): void {}
+
   /**
    * @description Appel de la fonction open() pour ouvrir la modal ModalEditPasswordComponent
    * puis mise à jour du mot de passe de l'utilisateur en BDD Firebase.

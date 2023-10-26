@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -14,7 +14,6 @@ import { MatDialogRef } from '@angular/material/dialog';
     </div>
   `,
   styleUrls: ['./modal-confirm-profile.component.css'],
-  //encapsulation: ViewEncapsulation.None,
 })
 export class ModalConfirmProfileComponent {
   private readonly dialogRef: MatDialogRef<any> = inject(MatDialogRef);

@@ -122,10 +122,3 @@ small {
 label {
   color: wheat;
 }
-
-/*------------------------------------------
-# Définition du background-color de la modal.
--------------------------------------------*/
-::ng-deep .mat-dialog-container {
-  background-color: #222;
-}
