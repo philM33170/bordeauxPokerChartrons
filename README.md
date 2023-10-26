@@ -8,9 +8,9 @@ Ce projet est la première version du site web de l'association Bordeaux Poker C
 
 ---
 
-Ayant un profil débutant, ce projet personnel a pour but de m'exercer sur
+Ce projet personnel a pour but de m'exercer sur
 
-        - la configuration/conception d'un projet Angular.
+        - la configuration/conception d'une application Angular.
 
         - la mise en repo sur GitHub.
 
@@ -20,14 +20,22 @@ Ayant un profil débutant, ce projet personnel a pour but de m'exercer sur
 
 ---
 
-Ce projet utilise la version 14.0.1 d'Angular ainsi que Bootstrap 5.
+Ce projet utilise la version 14.0.1 d'Angular.
 
-Cette version utilise la BDD Firebase en back-end.
+Cette version utilise la BDD Firebase.
 
-## Utilitaires
+## Utilitaires/Lbrairies
 
 ---
+
+- Firebase
 
 - VS Code
 
 - Git
+
+- Bootstrap 5
+
+- Angular Material
+
+- Angular-calendar
