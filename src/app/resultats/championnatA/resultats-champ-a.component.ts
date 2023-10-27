@@ -53,4 +53,18 @@ export class ResultatsChampAComponent {
   resultatsSide3$: Observable<Participant[]> = this.resultatService
     .readResultats('side3')
     .valueChanges();
+
+  /**
+   * @description Observable qui représente le classement du tournoi main4 du championnat A.
+   */
+  resultatsMain4$: Observable<Participant[]> = this.resultatService
+    .readResultats('main4')
+    .valueChanges();
+
+  /**
+   * @description Observable qui représente le classement du tournoi side4 du championnat A.
+   */
+  resultatsSide4$: Observable<Participant[]> = this.resultatService
+    .readResultats('side4')
+    .valueChanges();
 }

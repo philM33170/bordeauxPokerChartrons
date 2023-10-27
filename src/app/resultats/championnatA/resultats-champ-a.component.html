@@ -187,5 +187,67 @@
         </tbody>
       </table>
     </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main4"
+      aria-expanded="false"
+      aria-controls="main4"
+    >
+      Main Event 4 (19 et 26 octobre 2023)
+    </button>
+    <div class="collapse" id="main4">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsMain4$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#side4"
+      aria-expanded="false"
+      aria-controls="side4"
+    >
+      Side Event 4 (26 octobre 2023)
+    </button>
+    <div class="collapse" id="side4">
+      <table class="table table-sm table-dark table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="titreColonne" scope="col">POSITION</th>
+            <th class="titreColonne" scope="col">PSEUDO</th>
+            <th class="titreColonne" scope="col">POINTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            table="table-active"
+            *ngFor="let result of resultatsSide4$ | async; let i = index"
+          >
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ result.pseudo }}</td>
+            <td>{{ result.points }} PTS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </ng-container>
