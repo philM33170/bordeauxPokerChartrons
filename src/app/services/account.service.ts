@@ -29,13 +29,13 @@ export class AccountService {
       password
     );
 
-    const newUtilisateur: Utilisateur = {
+    const newUser: Utilisateur = {
       email,
       name,
       createdAt: new Date(),
       role: 'adhérent',
     };
-    await this.afs.collection<Utilisateur>('utilisateurs').add(newUtilisateur);
+    await this.afs.collection<Utilisateur>('utilisateurs').add(newUser);
 
     return this.result;
   }

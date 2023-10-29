@@ -8,12 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 480px;
+  height: 550px;
   width: 100%;
   margin: 20px 0;
   background: #000;
-  gap: 2px;
-  flex-wrap: wrap;
   overflow: hidden;
 }
 
@@ -21,9 +19,9 @@ div .signup {
   width: 400px;
   background: #222;
   z-index: 1000;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   padding: 40px;
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
