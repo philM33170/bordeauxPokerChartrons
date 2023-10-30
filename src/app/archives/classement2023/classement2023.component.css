@@ -25,3 +25,25 @@ th {
 .titreColonne {
   color: white;
 }
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  td,
+  th {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  td,
+  th {
+    font-size: 10px;
+  }
+}

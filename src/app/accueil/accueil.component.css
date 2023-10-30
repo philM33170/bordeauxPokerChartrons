@@ -8,8 +8,7 @@
   }
 }
 
-h4,
-h2 {
+.title {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -27,6 +26,11 @@ h2 {
   font-weight: 400;
   overflow: auto;
   border-radius: 15px;
+}
+
+.card-header {
+  font-family: "Poppins", "Inter", Verdana, sans-serif;
+  font-weight: bold;
 }
 
 /*-----------------------------------------

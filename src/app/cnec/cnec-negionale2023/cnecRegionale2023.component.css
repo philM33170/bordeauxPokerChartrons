@@ -33,3 +33,47 @@ th {
 .qualif th {
   background-color: rgb(59, 41, 6);
 }
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  td,
+  th {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  h1 {
+    font-size: 11px;
+  }
+
+  td,
+  th {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  h1 {
+    font-size: 10px;
+  }
+
+  td,
+  th {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  h1 {
+    font-size: 9px;
+  }
+
+  td,
+  th {
+    font-size: 4px;
+  }
+}

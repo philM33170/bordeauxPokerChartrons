@@ -74,3 +74,21 @@ span.cal-day-number {
 .cal-event-title {
   color: white !important;
 }
+
+@media screen and (max-width: 375px) {
+  #cal-date-field {
+    font-size: 10px;
+  }
+  .calendar {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #cal-date-field {
+    font-size: 9px;
+  }
+  .calendar {
+    font-size: 10px !important;
+  }
+}

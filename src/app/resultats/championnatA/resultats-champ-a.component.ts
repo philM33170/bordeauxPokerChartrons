@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./resultats-champ-a.component.css'],
 })
 export class ResultatsChampAComponent {
-  title: string = 'Résultats du Championnat A - saison 2023-2024';
+  title: string = 'Résultats du Championnat A';
   private readonly resultatService = inject(ResultatsChampAService);
 
   /**

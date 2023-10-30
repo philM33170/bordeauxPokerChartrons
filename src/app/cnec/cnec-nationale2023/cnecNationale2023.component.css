@@ -33,3 +33,17 @@ th {
 .qualif th {
   background-color: rgb(59, 41, 6);
 }
+
+@media screen and (max-width: 425px) {
+  .pos {
+    width: 40px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+
+  td,
+  th {
+    font-size: 7px;
+  }
+}

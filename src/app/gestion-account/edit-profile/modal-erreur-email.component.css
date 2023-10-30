@@ -27,3 +27,30 @@ h2 {
   color: yellow;
   font-size: 14px;
 }
+
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 12px;
+  }
+  button {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 11px;
+  }
+  button {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  h2 {
+    font-size: 9px;
+  }
+  button {
+    font-size: 10px;
+  }
+}
