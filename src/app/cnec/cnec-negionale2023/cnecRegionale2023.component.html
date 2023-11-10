@@ -1,11 +1,12 @@
 <ng-container>
-  <h1>CNEC - Finale régionale 2023 - Zone Aquitaine</h1>
+  <h1>CNEC - Finale régionale 2023</h1>
+  <h2>Zone Aquitaine</h2>
   <div>
     <table class="table table-dark table-bordered table-hover">
       <thead>
         <tr>
           <th class="titreColonne pos" scope="col">POSITION</th>
-          <th class="titreColonne" scope="col">CLUB</th>
+          <th class="titreColonne club" scope="col">CLUB</th>
           <th class="titreColonne" scope="col">MANCHE 1</th>
           <th class="titreColonne" scope="col">MANCHE 2</th>
           <th class="titreColonne" scope="col">MANCHE 3</th>
@@ -20,7 +21,7 @@
           [class.qualif]="i < 3"
         >
           <th class="pos" scope="row">{{ i + 1 }}</th>
-          <td>{{ club.nom | uppercase }}</td>
+          <td class="club">{{ club.nom | uppercase }}</td>
           <td>{{ club.manche1 }} PTS</td>
           <td>{{ club.manche2 }} PTS</td>
           <td>{{ club.manche3 }} PTS</td>

@@ -16,10 +16,17 @@ ul > li {
   cursor: pointer;
 }
 
+a {
+  color: gray;
+}
+
 li > ul {
   position: absolute;
   top: calc(100% + var(--border-size));
-  left: calc(var(--border-size) * -1);
+  /*left: calc(var(--border-size) * -1);*/
+  /*left: calc(-80px);*/
+  left: -30px;
+  font-size: 0.7rem;
   transform: scale(1, 0);
   transform-origin: top;
   transition: all ease-in 200ms 50ms;
@@ -29,10 +36,12 @@ li:hover > ul {
   transform: scale(1, 1);
 }
 
-a {
-  color: gray;
+li:active > ul {
+  transform: scale(1, 1);
 }
 
-@media screen and (max-width: 1090px) {
-  /*pb entre 992 et 1090*/
+@media only screen and (max-width: 950px) {
+  li > ul:not(.show) {
+    transform: scale(0);
+  }
 }

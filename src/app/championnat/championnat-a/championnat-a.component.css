@@ -43,16 +43,24 @@ th {
 }
 
 @media screen and (max-width: 400px) {
-  h1,
+  h1 {
+    font-size: 15px;
+  }
   h2 {
-    font-size: 18px;
+    font-size: 13px;
+  }
+  td,
+  th {
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  h1,
-  h2 {
+  h1 {
     font-size: 15px;
+  }
+  h2 {
+    font-size: 13px;
   }
   td,
   th {
@@ -61,6 +69,12 @@ th {
 }
 
 @media screen and (max-width: 280px) {
+  h1 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 12px;
+  }
   td,
   th {
     font-size: 10px;

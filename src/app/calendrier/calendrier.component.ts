@@ -144,7 +144,7 @@ export class CalendrierComponent {
       end: new Date('2023-11-16T23:30'),
     },
     {
-      title: 'CFEPA- Manche 1 - Domicile',
+      title: 'CFEPA - Manche 1 - Domicile',
       start: new Date('2023-11-19T9:30'),
       end: new Date('2023-11-19T23:30'),
     },
@@ -219,7 +219,7 @@ export class CalendrierComponent {
       end: new Date('2024-01-18T23:30'),
     },
     {
-      title: 'CFPA- Manche 2 - Parempuyre',
+      title: 'CFEPA - Manche 2 - Parempuyre',
       start: new Date('2024-01-21T09:30'),
       end: new Date('2024-01-21T23:30'),
     },
@@ -259,7 +259,7 @@ export class CalendrierComponent {
       end: new Date('2024-02-08T23:30'),
     },
     {
-      title: 'CFPA - Manche 3 - OPC Brive',
+      title: 'CFEPA - Manche 3 - OPC Brive',
       start: new Date('2024-02-11T09:30'),
       end: new Date('2024-02-11T23:30'),
     },

@@ -251,6 +251,68 @@
           </tbody>
         </table>
       </div>
+      <button
+        class="btn btn-secondary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main5"
+        aria-expanded="false"
+        aria-controls="main5"
+      >
+        Main Event 5 (2 et 9 novembre 2023)
+      </button>
+      <div class="collapse" id="main5">
+        <table class="table table-sm table-dark table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="titreColonne" scope="col">POSITION</th>
+              <th class="titreColonne" scope="col">PSEUDO</th>
+              <th class="titreColonne" scope="col">POINTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              table="table-active"
+              *ngFor="let result of resultatsMain5$ | async; let i = index"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ result.pseudo }}</td>
+              <td>{{ result.points }} PTS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button
+        class="btn btn-secondary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#side5"
+        aria-expanded="false"
+        aria-controls="side5"
+      >
+        Side Event 5 (9 novembre 2023)
+      </button>
+      <div class="collapse" id="side5">
+        <table class="table table-sm table-dark table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="titreColonne" scope="col">POSITION</th>
+              <th class="titreColonne" scope="col">PSEUDO</th>
+              <th class="titreColonne" scope="col">POINTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              table="table-active"
+              *ngFor="let result of resultatsSide5$ | async; let i = index"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ result.pseudo }}</td>
+              <td>{{ result.points }} PTS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </ng-container>

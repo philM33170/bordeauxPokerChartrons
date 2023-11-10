@@ -37,54 +37,54 @@ h4 {
   padding-top: 5px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 490px) {
   h4 {
     font-size: 13px;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 436px) {
   h4 {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 380px) {
   h4 {
-    font-size: 11px;
+    font-size: 10px;
   }
   p {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
 @media screen and (max-width: 360px) {
   h4 {
-    font-size: 10px;
-  }
-  p {
-    font-size: 11px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  h4 {
     font-size: 9px;
   }
   p {
-    font-size: 10px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  h4 {
+    font-size: 7px;
+  }
+  p {
+    font-size: 7px;
   }
 }
 
 @media screen and (max-width: 280px) {
   h4 {
-    font-size: 7px;
+    font-size: 6px;
   }
   p {
-    font-size: 8px;
+    font-size: 6px;
   }
 }

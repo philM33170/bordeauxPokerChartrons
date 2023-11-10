@@ -24,7 +24,7 @@ export class ChampionnatAnnuel2024Service {
    */
   readClassement(): AngularFirestoreCollection<Player> {
     return this.afs.collection<Player>('players2024', (element) =>
-      element.orderBy('ptsAnnuel', 'desc')
+      element.orderBy('ptsChampA', 'desc')
     );
   }
 }

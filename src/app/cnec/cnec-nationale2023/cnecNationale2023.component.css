@@ -1,10 +1,11 @@
 h1 {
-  padding: 10px;
+  margin-top: 10px;
   width: 100%;
   text-align: center;
   font-family: "Poppins", "Inter", Verdana, sans-serif;
   font-weight: 400;
   color: yellow;
+  margin-bottom: 10px;
 }
 
 thead tr {
@@ -34,16 +35,53 @@ th {
   background-color: rgb(59, 41, 6);
 }
 
-@media screen and (max-width: 425px) {
-  .pos {
-    width: 40px;
+@media screen and (max-width: 770px) {
+  h1 {
+    font-size: 22px;
   }
+
+  td,
+  th {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  td,
+  th {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 466px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  td,
+  th {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 425px) {
   h1 {
     font-size: 15px;
   }
 
   td,
   th {
-    font-size: 7px;
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 337px) {
+  h1 {
+    font-size: 13px;
+  }
+
+  td,
+  th {
+    font-size: 4px;
   }
 }
