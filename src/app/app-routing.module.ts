@@ -20,12 +20,14 @@ import { ResultatsChampCComponent } from './resultats/championnatC/resultats-cha
 import { MentionsComponent } from './mentions/mentions.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AuthGuard } from './guards/auth.guard';
+import { Qualif2024Component } from './cnec/qualif2024/qualif2024.component';
 
 const routes: Routes = [
   { path: 'club', component: ClubComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'cnic', component: CnicComponent },
+  { path: 'qualif2024', component: Qualif2024Component },
   { path: 'cnecRegionale', component: CnecRegionale2023Component },
   { path: 'cnecNationale', component: CnecNationale2023Component },
   { path: 'archives', component: Classement2023Component },

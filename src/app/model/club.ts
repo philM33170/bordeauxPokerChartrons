@@ -4,5 +4,6 @@ export interface Club {
   manche2?: number;
   manche3?: number;
   manche4?: number;
+  manche5?: number;
   totalPts: number;
 }

@@ -1,0 +1,36 @@
+<ng-container>
+  <h1>CFEPA - Zone Aquitaine</h1>
+  <h2>Qualification régionale 2024 - Poule C</h2>
+  <div>
+    <table class="table table-dark table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="titreColonne pos" scope="col">POSITION</th>
+          <th class="titreColonne" scope="col">CLUB</th>
+          <th class="titreColonne" scope="col">MANCHE 1</th>
+          <th class="titreColonne" scope="col">MANCHE 2</th>
+          <th class="titreColonne" scope="col">MANCHE 3</th>
+          <th class="titreColonne" scope="col">MANCHE 4</th>
+          <th class="titreColonne" scope="col">MANCHE 5</th>
+          <th class="titreColonne" scope="col">TOTAL PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          table="table-active"
+          *ngFor="let club of clubs$ | async; let i = index"
+          [class.qualif]="i < 3"
+        >
+          <th class="pos" scope="row">{{ i + 1 }}</th>
+          <td>{{ club.nom | uppercase }}</td>
+          <td>{{ club.manche1 }} PTS</td>
+          <td>{{ club.manche2 }} PTS</td>
+          <td>{{ club.manche3 }} PTS</td>
+          <td>{{ club.manche4 }} PTS</td>
+          <td>{{ club.manche5 }} PTS</td>
+          <td>{{ club.totalPts }} PTS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>

@@ -33,6 +33,9 @@ a {
   color: gray;
 }
 
+.dropdown-divider {
+  color: blue;
+}
 @media screen and (max-width: 1090px) {
   /*pb entre 992 et 1090*/
 }
