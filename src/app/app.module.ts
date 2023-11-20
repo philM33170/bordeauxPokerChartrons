@@ -47,6 +47,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import config from '../../my-firestore';
+import { Qualif2024Component } from './cnec/qualif2024/qualif2024.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
@@ -73,6 +74,7 @@ registerLocaleData(localeFr, 'fr');
     CnecNationale2023Component,
     MentionsComponent,
     ForgotPasswordComponent,
+    Qualif2024Component,
   ],
   imports: [
     BrowserModule,
