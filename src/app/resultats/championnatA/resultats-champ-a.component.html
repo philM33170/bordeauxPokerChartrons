@@ -313,6 +313,68 @@
           </tbody>
         </table>
       </div>
+      <button
+        class="btn btn-secondary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#main6"
+        aria-expanded="false"
+        aria-controls="main6"
+      >
+        Main Event 6 (16 et 23 novembre 2023)
+      </button>
+      <div class="collapse" id="main6">
+        <table class="table table-sm table-dark table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="titreColonne" scope="col">POSITION</th>
+              <th class="titreColonne" scope="col">PSEUDO</th>
+              <th class="titreColonne" scope="col">POINTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              table="table-active"
+              *ngFor="let result of resultatsMain6$ | async; let i = index"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ result.pseudo }}</td>
+              <td>{{ result.points }} PTS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button
+        class="btn btn-secondary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#side6"
+        aria-expanded="false"
+        aria-controls="side6"
+      >
+        Side Event 6 (23 novembre 2023)
+      </button>
+      <div class="collapse" id="side6">
+        <table class="table table-sm table-dark table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="titreColonne" scope="col">POSITION</th>
+              <th class="titreColonne" scope="col">PSEUDO</th>
+              <th class="titreColonne" scope="col">POINTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              table="table-active"
+              *ngFor="let result of resultatsSide6$ | async; let i = index"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ result.pseudo }}</td>
+              <td>{{ result.points }} PTS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </ng-container>
