@@ -6,6 +6,7 @@ h1 {
   font-weight: 400;
   color: yellow;
   margin-bottom: 10px;
+  font-size: clamp(14px, 10px + 2vw, 22px);
 }
 
 thead tr {
@@ -28,9 +29,9 @@ th {
 }
 
 @media screen and (max-width: 425px) {
-  h1 {
+  /*h1 {
     font-size: 15px;
-  }
+  }*/
 
   td,
   th {
@@ -46,9 +47,9 @@ th {
 }
 
 @media screen and (max-width: 320px) {
-  h1 {
+  /*h1 {
     font-size: 12px;
-  }
+  }*/
 
   td,
   th {
@@ -57,9 +58,9 @@ th {
 }
 
 @media screen and (max-width: 280px) {
-  h1 {
+  /*h1 {
     font-size: 12px;
-  }
+  }*/
 
   td,
   th {

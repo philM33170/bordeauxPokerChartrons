@@ -12,6 +12,7 @@ h1 {
   font-weight: 400;
   color: yellow;
   margin-bottom: 2px;
+  font-size: clamp(14px, 10px + 2vw, 22px);
 }
 
 h2 {
@@ -21,6 +22,7 @@ h2 {
   font-weight: 400;
   color: yellow;
   margin-bottom: 10px;
+  font-size: clamp(11px, 7px + 2vw, 19px);
 }
 
 thead tr {
@@ -43,12 +45,12 @@ th {
 }
 
 @media screen and (max-width: 400px) {
-  h1 {
+  /*h1 {
     font-size: 15px;
   }
   h2 {
     font-size: 13px;
-  }
+  }*/
   td,
   th {
     font-size: 12px;
@@ -56,12 +58,12 @@ th {
 }
 
 @media screen and (max-width: 320px) {
-  h1 {
+  /*h1 {
     font-size: 15px;
   }
   h2 {
     font-size: 13px;
-  }
+  }*/
   td,
   th {
     font-size: 12px;
@@ -69,12 +71,12 @@ th {
 }
 
 @media screen and (max-width: 280px) {
-  h1 {
+  /*h1 {
     font-size: 14px;
   }
   h2 {
     font-size: 12px;
-  }
+  }*/
   td,
   th {
     font-size: 10px;

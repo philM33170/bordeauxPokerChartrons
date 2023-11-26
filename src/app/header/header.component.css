@@ -21,6 +21,7 @@
 #image {
   background-size: cover;
   height: 18vh;
+  /*object-fit: contain;*/
 }
 
 h1 {
