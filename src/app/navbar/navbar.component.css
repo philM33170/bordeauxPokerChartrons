@@ -40,6 +40,10 @@ li:active > ul {
   transform: scale(1, 1);
 }
 
+a:not(.show) ~ ul {
+  transform: scale(0);
+}
+
 @media screen and (max-width: 1090px) {
   /*pb entre 992 et 1090*/
 }

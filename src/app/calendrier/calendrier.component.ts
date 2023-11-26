@@ -189,14 +189,14 @@ export class CalendrierComponent {
       end: new Date('2023-12-12T23:30'),
     },
     {
-      title: 'Tournoi de Noel',
-      start: new Date('2023-12-14T20:00'),
-      end: new Date('2023-12-14T23:30'),
+      title: 'Champ B - MTT1 - Day1',
+      start: new Date('2023-12-13T20:00'),
+      end: new Date('2023-12-13T23:30'),
     },
     {
-      title: 'Champ B - MTT1 - Day1',
-      start: new Date('2024-01-04T20:00'),
-      end: new Date('2024-01-04T23:30'),
+      title: 'Tournoi de Noel',
+      start: new Date('2023-12-21T20:00'),
+      end: new Date('2023-12-21T23:30'),
     },
     {
       title: 'Poker School',

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./resultats-champ-b.component.css'],
 })
 export class ResultatsChampBComponent implements OnInit {
-  title: string = 'Résultats du Championnat B - saison 2023-2024';
+  title: string = 'Résultats du Championnat B';
   private readonly resultatService = inject(ResultatsChampBService);
   tournoisCollection!: AngularFirestoreCollection<Participant>;
   resultats$!: Observable<Participant[]>;
