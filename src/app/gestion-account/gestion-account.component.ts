@@ -33,7 +33,6 @@ export class GestionAccountComponent implements OnInit, OnDestroy {
       }
     );
   }
-
   ngOnDestroy(): void {
     this.currentUserSubscription.unsubscribe();
   }
